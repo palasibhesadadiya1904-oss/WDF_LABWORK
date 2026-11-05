@@ -1,82 +1,286 @@
-<<<<<<< HEAD
-<h1>Student Registration</h1>
-=======
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-      <link rel="stylesheet" href="style.css"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Register for a StudentHub student account.">
+
+    <title>StudentHub | Student Registration</title>
 </head>
+
 <body>
-   <h1>Student Registration</h1>
->>>>>>> f839256 (style.css added)
 
-<p>
-Create your StudentHub account and stay connected with
-student services, events, and announcements.
-</p>
+    <!-- Skip Navigation -->
+    <a href="#main-content">Skip to main content</a>
 
-<hr>
+    <!-- Website Header -->
+    <header>
 
-<form>
+        <h1>🎓 StudentHub</h1>
 
-<label>Full Name:</label><br>
-<input type="text" placeholder="Enter your name">
-<br><br>
+        <p>Your college life, organized in one place.</p>
 
-<label>Email Address:</label><br>
-<input type="email" placeholder="Enter your email">
-<br><br>
+        <!-- Main Navigation -->
+        <nav aria-label="Main navigation">
 
-<label>Phone Number:</label><br>
-<input type="text" placeholder="Enter your phone number">
-<br><br>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Register.html" aria-current="page">Register</a></li>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="Admin.html">Admin</a></li>
+            </ul>
 
-<label>Date of Birth:</label><br>
-<input type="date">
-<br><br>
+        </nav>
 
-<label>Gender:</label><br>
-<input type="radio" name="gender"> Male
-<input type="radio" name="gender"> Female
-<input type="radio" name="gender"> Other
-<br><br>
-
-<label>Enrollment Number:</label><br>
-<input type="text" placeholder="Enter enrollment number">
-<br><br>
-
-<label>Department:</label><br>
-<select>
-    <option>Computer Science</option>
-    <option>Information Technology</option>
-    <option>Commerce</option>
-    <option>Management</option>
-</select>
-
-<br><br>
-
-<label>Course:</label><br>
-<input type="text" placeholder="Enter your course">
-<br><br>
+    </header>
 
 
-<label>Semester:</label><br>
-<input type="text" placeholder="Enter semester">
-<br><br>
+    <!-- Main Content -->
+    <main id="main-content">
 
-<label>Password:</label><br>
-<input type="password" placeholder="Create password">
-<br><br>
+        <section aria-labelledby="registration-heading">
 
-<label>Confirm Password:</label><br>
-<input type="password" placeholder="Confirm password">
-<br><br>
+            <h2 id="registration-heading">Student Registration</h2>
 
-<button type="submit">Register</button>
-<button type="reset">Clear</button>
+            <p>
+                Create your StudentHub account by providing
+                the required information below.
+            </p>
 
-<<<<<<< HEAD
-</form>
-=======
-</form>
-<footer>StudentHub © 2026</footer>
+            <form action="#" method="post">
+
+                <!-- Personal Information -->
+                <fieldset>
+
+                    <legend>Personal Information</legend>
+
+                    <div>
+                        <label for="full-name">Full Name:</label>
+                        <input
+                            type="text"
+                            id="full-name"
+                            name="fullName"
+                            autocomplete="name"
+                            required>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="email">Email Address:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="email"
+                            required>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="mobile">Mobile Number:</label>
+                        <input
+                            type="tel"
+                            id="mobile"
+                            name="mobile"
+                            autocomplete="tel"
+                            required>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="dob">Date of Birth:</label>
+                        <input
+                            type="date"
+                            id="dob"
+                            name="dateOfBirth">
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <span>Gender:</span>
+
+                        <br>
+
+                        <input
+                            type="radio"
+                            id="female"
+                            name="gender"
+                            value="female">
+
+                        <label for="female">Female</label>
+
+                        <input
+                            type="radio"
+                            id="male"
+                            name="gender"
+                            value="male">
+
+                        <label for="male">Male</label>
+
+                        <input
+                            type="radio"
+                            id="other"
+                            name="gender"
+                            value="other">
+
+                        <label for="other">Other</label>
+
+                    </div>
+
+                </fieldset>
+
+
+                <!-- Academic Information -->
+                <fieldset>
+
+                    <legend>Academic Information</legend>
+
+                    <div>
+                        <label for="student-id">Student ID:</label>
+                        <input
+                            type="text"
+                            id="student-id"
+                            name="studentId"
+                            required>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="course">Course:</label>
+
+                        <select id="course" name="course" required>
+
+                            <option value="">Select your course</option>
+
+                            <option value="computer-engineering">
+                                Computer Engineering
+                            </option>
+
+                            <option value="information-technology">
+                                Information Technology
+                            </option>
+
+                            <option value="electronics">
+                                Electronics Engineering
+                            </option>
+
+                            <option value="other">Other</option>
+
+                        </select>
+
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="year">Year of Study:</label>
+
+                        <select id="year" name="year" required>
+
+                            <option value="">Select year</option>
+                            <option value="first">First Year</option>
+                            <option value="second">Second Year</option>
+                            <option value="third">Third Year</option>
+                            <option value="fourth">Fourth Year</option>
+
+                        </select>
+
+                    </div>
+
+                </fieldset>
+
+
+                <!-- Account Information -->
+                <fieldset>
+
+                    <legend>Account Information</legend>
+
+                    <div>
+                        <label for="password">Password:</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            autocomplete="new-password"
+                            required>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="confirm-password">
+                            Confirm Password:
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirm-password"
+                            name="confirmPassword"
+                            autocomplete="new-password"
+                            required>
+                    </div>
+
+                </fieldset>
+
+
+                <!-- Terms and Conditions -->
+                <div>
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        name="terms"
+                        required>
+
+                    <label for="terms">
+                        I agree to the terms and conditions.
+                    </label>
+
+                </div>
+
+                <br>
+
+                <button type="submit">Create Account</button>
+
+                <button type="reset">Reset Form</button>
+
+            </form>
+
+            <p>
+                Already have an account?
+                <a href="Login.html">Login here</a>.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Website Footer -->
+    <footer>
+
+        <p>&copy; 2026 StudentHub. All rights reserved.</p>
+
+        <p>Learn. Connect. Grow.</p>
+
+    </footer>
+
 </body>
->>>>>>> f839256 (style.css added)
+
+</html>

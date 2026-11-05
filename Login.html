@@ -1,50 +1,150 @@
-<<<<<<< HEAD
-<fieldset>
-=======
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-     <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Login to your StudentHub student account.">
+
+    <title>StudentHub | Login</title>
 </head>
+
 <body>
 
-    <fieldset>
->>>>>>> f839256 (style.css added)
-<legend><h2>Login</h2> </legend>
-<form action="#" method="post">
-        <p>
-        <label for="email">Email Adress</label><br>
-        <input type="email" id="email" name="email" placeholder="Enter your email">
-    </p>
-    <p>
-        <label for="password">Password</label><br>
-        <input type="password" id="password" name="password" placeholder="Enter your password">
-    </p>
-    <p>
-        <lable for="role">Select Role</lable><br>
-        <select id="role" name="role" required>
-        <option value="">---select role---</option>
-        <option value="Student">Student</option>
-        <option value="Faculty">Faculty</option>
-        <option value="Admin">Admin</option>
-        </select>   
-    </p>
-    <p>
-        <input type="checkbox"  id="checkbox" name="checkbox">
-        <lable>Remember Me</lable>
-        
-    </p>
-    <p>
-        <button type="submit">Login</button>
-        <button type="reset">Clear</button>
+    <!-- Skip Navigation -->
+    <a href="#main-content">Skip to main content</a>
 
-    </p>
-</form>
-    
+    <!-- Website Header -->
+    <header>
 
-</fieldset>
-<<<<<<< HEAD
-=======
-<footer>StudentHub © 2026</footer>
+        <h1>🎓 StudentHub</h1>
+
+        <p>Your college life, organized in one place.</p>
+
+        <!-- Main Navigation -->
+        <nav aria-label="Main navigation">
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Register.html">Register</a></li>
+                <li><a href="Login.html" aria-current="page">Login</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="Admin.html">Admin</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
 
 
-</body> 
->>>>>>> f839256 (style.css added)
+    <!-- Main Content -->
+    <main id="main-content">
+
+        <section aria-labelledby="login-heading">
+
+            <h2 id="login-heading">Student Login</h2>
+
+            <p>
+                Welcome back to StudentHub!
+                Enter your login details to access your account.
+            </p>
+
+            <form action="#" method="post">
+
+                <fieldset>
+
+                    <legend>Login Information</legend>
+
+                    <div>
+                        <label for="email">Email Address:</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="username"
+                            required>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="password">Password:</label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            autocomplete="current-password"
+                            required>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="remember"
+                            name="remember">
+
+                        <label for="remember">
+                            Remember me
+                        </label>
+                    </div>
+
+                    <br>
+
+                    <button type="submit">Login</button>
+
+                    <button type="reset">Clear</button>
+
+                </fieldset>
+
+            </form>
+
+            <p>
+                Don't have an account?
+                <a href="Register.html">Register here</a>.
+            </p>
+
+        </section>
+
+
+        <!-- Help Section -->
+        <aside aria-labelledby="login-help">
+
+            <h2 id="login-help">Need Help?</h2>
+
+            <p>
+                If you are facing problems accessing your account,
+                please contact our support team.
+            </p>
+
+            <a href="Contact.html">Contact Support</a>
+
+        </aside>
+
+    </main>
+
+
+    <!-- Website Footer -->
+    <footer>
+
+        <p>&copy; 2026 StudentHub. All rights reserved.</p>
+
+        <p>Learn. Connect. Grow.</p>
+
+    </footer>
+
+</body>
+
+</html>
