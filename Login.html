@@ -6,146 +6,232 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Login to your StudentHub student account.">
+    <meta name="description" content="Login to the StudentHub student portal.">
 
-    <title>StudentHub | Login</title>
+    <title>Student Login | StudentHub</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Login Page Layout */
+
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 35px 15px;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 500px;
+            background: #FFFFFF;
+            padding: 30px;
+            border: 1px solid #D9E5EF;
+            border-top: 4px solid #4A91C2;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(23, 63, 103, 0.08);
+        }
+
+        .login-card h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .login-description {
+            text-align: center;
+            color: #65798B;
+            margin-bottom: 25px;
+        }
+
+        .login-form .form-group {
+            margin-bottom: 18px;
+        }
+
+        .login-form label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        .login-form input[type="email"],
+        .login-form input[type="password"] {
+            width: 100%;
+            max-width: 100%;
+            padding: 12px;
+            border: 1px solid #B7C9D9;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .remember-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .remember-option input {
+            accent-color: #285F8B;
+        }
+
+        .remember-option label {
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .login-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .login-buttons button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background: #285F8B;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .login-buttons button:hover {
+            background: #173F67;
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 22px;
+        }
+
+        .login-help {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: 650px) {
+            .login-card {
+                padding: 20px;
+            }
+
+            .login-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Skip Navigation -->
-    <a href="#main-content">Skip to main content</a>
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
 
-    <!-- Website Header -->
     <header>
-
-        <h1>🎓 StudentHub</h1>
-
-        <p>Your college life, organized in one place.</p>
-
-        <!-- Main Navigation -->
-        <nav aria-label="Main navigation">
-
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Register.html">Register</a></li>
-                <li><a href="Login.html" aria-current="page">Login</a></li>
-                <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="Events.html">Events</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-                <li><a href="FAQ.html">FAQ</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="Admin.html">Admin</a></li>
-            </ul>
-
-        </nav>
-
+        <h1>StudentHub</h1>
+        <p>Your Student Support and Information Portal</p>
     </header>
 
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Register.html">Register</a>
+        <a href="Login.html" aria-current="page">Login</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="Events.html">Events</a>
+        <a href="profile.html">Profile</a>
+        <a href="Contact.html">Contact</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="Admin.html">Admin</a>
+    </nav>
 
-    <!-- Main Content -->
     <main id="main-content">
 
-        <section aria-labelledby="login-heading">
-
-            <h2 id="login-heading">Student Login</h2>
-
+        <section>
+            <h2>Welcome Back!</h2>
             <p>
-                Welcome back to StudentHub!
-                Enter your login details to access your account.
+                Login to StudentHub to explore student information,
+                academic updates and campus activities.
             </p>
+        </section>
 
-            <form action="#" method="post">
+        <div class="login-container">
 
-                <fieldset>
+            <section class="login-card">
 
-                    <legend>Login Information</legend>
+                <h2>Student Login</h2>
 
-                    <div>
+                <p class="login-description">
+                    Enter your account details to continue.
+                </p>
+
+                <form class="login-form" action="#" method="post">
+
+                    <div class="form-group">
                         <label for="email">Email Address:</label>
 
                         <input
                             type="email"
                             id="email"
                             name="email"
-                            autocomplete="username"
-                            required>
+                            placeholder="Enter your email"
+                            required
+                        >
                     </div>
 
-                    <br>
-
-                    <div>
+                    <div class="form-group">
                         <label for="password">Password:</label>
 
                         <input
                             type="password"
                             id="password"
                             name="password"
-                            autocomplete="current-password"
-                            required>
+                            placeholder="Enter your password"
+                            required
+                        >
                     </div>
 
-                    <br>
-
-                    <div>
+                    <div class="remember-option">
                         <input
                             type="checkbox"
                             id="remember"
-                            name="remember">
+                            name="remember"
+                        >
 
                         <label for="remember">
                             Remember me
                         </label>
                     </div>
 
-                    <br>
+                    <div class="login-buttons">
+                        <button type="submit">Login</button>
+                        <button type="reset">Clear</button>
+                    </div>
 
-                    <button type="submit">Login</button>
+                </form>
 
-                    <button type="reset">Clear</button>
+                <p class="register-link">
+                    Don't have an account?
+                    <a href="Register.html">Register here</a>.
+                </p>
 
-                </fieldset>
+                <p class="login-help">
+                    Need help?
+                    <a href="Contact.html">Contact Support</a>
+                </p>
 
-            </form>
+            </section>
 
-            <p>
-                Don't have an account?
-                <a href="Register.html">Register here</a>.
-            </p>
-
-        </section>
-
-
-        <!-- Help Section -->
-        <aside aria-labelledby="login-help">
-
-            <h2 id="login-help">Need Help?</h2>
-
-            <p>
-                If you are facing problems accessing your account,
-                please contact our support team.
-            </p>
-
-            <a href="Contact.html">Contact Support</a>
-
-        </aside>
+        </div>
 
     </main>
 
-
-    <!-- Website Footer -->
     <footer>
-
         <p>&copy; 2026 StudentHub. All rights reserved.</p>
-
-        <p>Learn. Connect. Grow.</p>
-
     </footer>
 
 </body>
-
 </html>

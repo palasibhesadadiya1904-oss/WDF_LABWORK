@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Register for a StudentHub student account.">
+        content="Register as a student on the StudentHub platform.">
 
     <title>StudentHub | Student Registration</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,44 +21,46 @@
 
     <!-- Website Header -->
     <header>
-
         <h1>🎓 StudentHub</h1>
-
         <p>Your college life, organized in one place.</p>
-
-        <!-- Main Navigation -->
-        <nav aria-label="Main navigation">
-
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Register.html" aria-current="page">Register</a></li>
-                <li><a href="Login.html">Login</a></li>
-                <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="Events.html">Events</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-                <li><a href="FAQ.html">FAQ</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="Admin.html">Admin</a></li>
-            </ul>
-
-        </nav>
-
     </header>
 
+    <!-- Main Navigation -->
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Register.html" aria-current="page">Register</a></li>
+            <li><a href="Login.html">Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="Events.html">Events</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="Admin.html">Admin</a></li>
+        </ul>
+    </nav>
 
     <!-- Main Content -->
     <main id="main-content">
 
+        <!-- Registration Introduction -->
         <section aria-labelledby="registration-heading">
 
             <h2 id="registration-heading">Student Registration</h2>
 
             <p>
-                Create your StudentHub account by providing
-                the required information below.
+                Create your StudentHub account by entering
+                your personal and academic information below.
             </p>
+
+        </section>
+
+        <!-- Registration Form -->
+        <section aria-labelledby="form-heading">
+
+            <h2 id="form-heading">Create Your Account</h2>
 
             <form action="#" method="post">
 
@@ -66,222 +69,206 @@
 
                     <legend>Personal Information</legend>
 
-                    <div>
-                        <label for="full-name">Full Name:</label>
-                        <input
-                            type="text"
-                            id="full-name"
-                            name="fullName"
-                            autocomplete="name"
-                            required>
-                    </div>
+                    <div class="form-grid">
 
-                    <br>
+                        <div class="form-group">
+                            <label for="fullname">Full Name:</label>
 
-                    <div>
-                        <label for="email">Email Address:</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            autocomplete="email"
-                            required>
-                    </div>
+                            <input
+                                type="text"
+                                id="fullname"
+                                name="fullname"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required>
+                        </div>
 
-                    <br>
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
 
-                    <div>
-                        <label for="mobile">Mobile Number:</label>
-                        <input
-                            type="tel"
-                            id="mobile"
-                            name="mobile"
-                            autocomplete="tel"
-                            required>
-                    </div>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                                required>
+                        </div>
 
-                    <br>
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number:</label>
 
-                    <div>
-                        <label for="dob">Date of Birth:</label>
-                        <input
-                            type="date"
-                            id="dob"
-                            name="dateOfBirth">
-                    </div>
+                            <input
+                                type="tel"
+                                id="mobile"
+                                name="mobile"
+                                placeholder="Enter mobile number"
+                                autocomplete="tel"
+                                required>
+                        </div>
 
-                    <br>
+                        <div class="form-group">
+                            <label for="dob">Date of Birth:</label>
 
-                    <div>
-                        <span>Gender:</span>
+                            <input
+                                type="date"
+                                id="dob"
+                                name="dob"
+                                required>
+                        </div>
 
-                        <br>
+                        <div class="form-group">
+                            <label for="gender">Gender:</label>
 
-                        <input
-                            type="radio"
-                            id="female"
-                            name="gender"
-                            value="female">
-
-                        <label for="female">Female</label>
-
-                        <input
-                            type="radio"
-                            id="male"
-                            name="gender"
-                            value="male">
-
-                        <label for="male">Male</label>
-
-                        <input
-                            type="radio"
-                            id="other"
-                            name="gender"
-                            value="other">
-
-                        <label for="other">Other</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="female">Female</option>
+                                <option value="male">Male</option>
+                                <option value="other">Other</option>
+                                <option value="prefer-not-to-say">Prefer not to say</option>
+                            </select>
+                        </div>
 
                     </div>
 
                 </fieldset>
 
+                <br>
 
                 <!-- Academic Information -->
                 <fieldset>
 
                     <legend>Academic Information</legend>
 
-                    <div>
-                        <label for="student-id">Student ID:</label>
-                        <input
-                            type="text"
-                            id="student-id"
-                            name="studentId"
-                            required>
-                    </div>
+                    <div class="form-grid">
 
-                    <br>
+                        <div class="form-group">
+                            <label for="studentid">Student ID:</label>
 
-                    <div>
-                        <label for="course">Course:</label>
+                            <input
+                                type="text"
+                                id="studentid"
+                                name="studentid"
+                                placeholder="Enter student ID"
+                                required>
+                        </div>
 
-                        <select id="course" name="course" required>
+                        <div class="form-group">
+                            <label for="course">Course:</label>
 
-                            <option value="">Select your course</option>
+                            <select id="course" name="course" required>
+                                <option value="">Select Course</option>
+                                <option value="computer-engineering">Computer Engineering</option>
+                                <option value="it">Information Technology</option>
+                                <option value="mechanical">Mechanical Engineering</option>
+                                <option value="civil">Civil Engineering</option>
+                                <option value="electrical">Electrical Engineering</option>
+                            </select>
+                        </div>
 
-                            <option value="computer-engineering">
-                                Computer Engineering
-                            </option>
+                        <div class="form-group">
+                            <label for="year">Academic Year:</label>
 
-                            <option value="information-technology">
-                                Information Technology
-                            </option>
-
-                            <option value="electronics">
-                                Electronics Engineering
-                            </option>
-
-                            <option value="other">Other</option>
-
-                        </select>
-
-                    </div>
-
-                    <br>
-
-                    <div>
-                        <label for="year">Year of Study:</label>
-
-                        <select id="year" name="year" required>
-
-                            <option value="">Select year</option>
-                            <option value="first">First Year</option>
-                            <option value="second">Second Year</option>
-                            <option value="third">Third Year</option>
-                            <option value="fourth">Fourth Year</option>
-
-                        </select>
+                            <select id="year" name="year" required>
+                                <option value="">Select Year</option>
+                                <option value="first">First Year</option>
+                                <option value="second">Second Year</option>
+                                <option value="third">Third Year</option>
+                                <option value="fourth">Fourth Year</option>
+                            </select>
+                        </div>
 
                     </div>
 
                 </fieldset>
 
+                <br>
 
                 <!-- Account Information -->
                 <fieldset>
 
                     <legend>Account Information</legend>
 
-                    <div>
-                        <label for="password">Password:</label>
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            autocomplete="new-password"
-                            required>
-                    </div>
+                    <div class="form-grid">
 
-                    <br>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
 
-                    <div>
-                        <label for="confirm-password">
-                            Confirm Password:
-                        </label>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                required>
+                        </div>
 
-                        <input
-                            type="password"
-                            id="confirm-password"
-                            name="confirmPassword"
-                            autocomplete="new-password"
-                            required>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password:</label>
+
+                            <input
+                                type="password"
+                                id="confirm-password"
+                                name="confirm-password"
+                                placeholder="Confirm your password"
+                                autocomplete="new-password"
+                                required>
+                        </div>
+
                     </div>
 
                 </fieldset>
 
+                <br>
 
-                <!-- Terms and Conditions -->
-                <div>
+                
+<div class="terms-group">
+    <input type="checkbox" id="terms" name="terms" required>
+    <label for="terms">
+        I agree to the terms and conditions.
+    </label>
+</div>
 
-                    <input
-                        type="checkbox"
-                        id="terms"
-                        name="terms"
-                        required>
 
-                    <label for="terms">
-                        I agree to the terms and conditions.
-                    </label>
 
                 </div>
 
-                <br>
+                <!-- Form Buttons -->
+                <div class="form-actions">
 
-                <button type="submit">Create Account</button>
+                    <button type="submit">Create Account</button>
 
-                <button type="reset">Reset Form</button>
+                    <button type="reset">Clear Form</button>
+
+                </div>
 
             </form>
 
-            <p>
-                Already have an account?
-                <a href="Login.html">Login here</a>.
-            </p>
+        </section>
+
+        <!-- Existing Account -->
+        <section aria-labelledby="login-link-heading">
+
+            <h2 id="login-link-heading">Already Have an Account?</h2>
+
+            <article>
+                <p>
+                    If you already have a StudentHub account,
+                    you can log in directly.
+                </p>
+
+                <a href="Login.html">Go to Login</a>
+            </article>
 
         </section>
 
     </main>
 
-
     <!-- Website Footer -->
     <footer>
-
         <p>&copy; 2026 StudentHub. All rights reserved.</p>
-
         <p>Learn. Connect. Grow.</p>
-
     </footer>
 
 </body>
-
 </html>

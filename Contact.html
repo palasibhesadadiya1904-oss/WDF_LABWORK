@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Contact StudentHub for student support, enquiries and assistance.">
+        content="Contact StudentHub for student support and enquiries.">
 
     <title>StudentHub | Contact Us</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,36 +21,31 @@
 
     <!-- Website Header -->
     <header>
-
         <h1>🎓 StudentHub</h1>
-
         <p>Your college life, organized in one place.</p>
-
-        <!-- Main Navigation -->
-        <nav aria-label="Main navigation">
-
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Register.html">Register</a></li>
-                <li><a href="Login.html">Login</a></li>
-                <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="Events.html">Events</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="Contact.html" aria-current="page">Contact</a></li>
-                <li><a href="FAQ.html">FAQ</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="Admin.html">Admin</a></li>
-            </ul>
-
-        </nav>
-
     </header>
 
+    <!-- Main Navigation -->
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Register.html">Register</a></li>
+            <li><a href="Login.html">Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="Events.html">Events</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="Contact.html" aria-current="page">Contact</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="Admin.html">Admin</a></li>
+        </ul>
+    </nav>
 
     <!-- Main Content -->
     <main id="main-content">
 
+        <!-- Introduction -->
         <section aria-labelledby="contact-heading">
 
             <h2 id="contact-heading">Contact Us</h2>
@@ -61,48 +57,48 @@
 
         </section>
 
-
         <!-- Contact Information -->
-        <section aria-labelledby="contact-info-heading">
+        <section aria-labelledby="information-heading">
 
-            <h2 id="contact-info-heading">Contact Information</h2>
+            <h2 id="information-heading">Our Contact Information</h2>
 
             <article>
-
                 <h3>Email Support</h3>
 
                 <p>
-                    Email:
-                    <a href="mailto:support@studenthub.com">
-                        support@studenthub.com
-                    </a>
+                    Send your questions and enquiries through email.
                 </p>
 
+                <a href="mailto:support@studenthub.com">
+                    support@studenthub.com
+                </a>
             </article>
 
             <article>
-
                 <h3>Phone Support</h3>
 
                 <p>
-                    Phone:
-                    <a href="tel:+919876543210">
-                        +91 98765 43210
-                    </a>
+                    Contact our support team for assistance.
                 </p>
 
+                <a href="tel:+919876543210">
+                    +91 98765 43210
+                </a>
             </article>
 
             <article>
-
                 <h3>Office Hours</h3>
 
-                <p>Monday to Friday: 9:00 AM to 5:00 PM</p>
+                <p>
+                    Monday to Friday
+                </p>
 
+                <p>
+                    9:00 AM to 5:00 PM
+                </p>
             </article>
 
         </section>
-
 
         <!-- Contact Form -->
         <section aria-labelledby="message-heading">
@@ -115,60 +111,60 @@
 
                     <legend>Your Contact Details</legend>
 
-                    <div>
-                        <label for="name">Full Name:</label>
+                    <div class="form-grid">
 
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            autocomplete="name"
-                            required>
+                        <div class="form-group">
+                            <label for="name">Full Name:</label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                autocomplete="name"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                placeholder="Enter subject"
+                                required>
+                        </div>
+
                     </div>
 
-                    <br>
-
-                    <div>
-                        <label for="email">Email Address:</label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            autocomplete="email"
-                            required>
-                    </div>
-
-                    <br>
-
-                    <div>
-                        <label for="subject">Subject:</label>
-
-                        <input
-                            type="text"
-                            id="subject"
-                            name="subject"
-                            required>
-                    </div>
-
-                    <br>
-
-                    <div>
+                    <div class="form-group message-group">
                         <label for="message">Your Message:</label>
 
                         <textarea
                             id="message"
                             name="message"
                             rows="5"
-                            cols="40"
+                            placeholder="Write your message here..."
                             required></textarea>
                     </div>
 
-                    <br>
-
-                    <button type="submit">Send Message</button>
-
-                    <button type="reset">Clear Form</button>
+                    <div class="form-actions">
+                        <button type="submit">Send Message</button>
+                        <button type="reset">Clear Form</button>
+                    </div>
 
                 </fieldset>
 
@@ -176,33 +172,42 @@
 
         </section>
 
+        <!-- Additional Support -->
+        <section aria-labelledby="support-heading">
 
-        <!-- Additional Help -->
-        <aside aria-labelledby="help-heading">
+            <h2 id="support-heading">Additional Support</h2>
 
-            <h2 id="help-heading">Additional Help</h2>
+            <article>
+                <h3>Frequently Asked Questions</h3>
 
-            <p>
-                You can also visit our FAQ page
-                to find answers to common questions.
-            </p>
+                <p>
+                    Find answers to common questions
+                    about using StudentHub.
+                </p>
 
-            <a href="FAQ.html">Visit FAQ</a>
+                <a href="FAQ.html">Visit FAQ</a>
+            </article>
 
-        </aside>
+            <article>
+                <h3>Student Feedback</h3>
+
+                <p>
+                    Share your suggestions and ideas
+                    to help improve StudentHub.
+                </p>
+
+                <a href="feedback.html">Give Feedback</a>
+            </article>
+
+        </section>
 
     </main>
 
-
     <!-- Website Footer -->
     <footer>
-
         <p>&copy; 2026 StudentHub. All rights reserved.</p>
-
         <p>Learn. Connect. Grow.</p>
-
     </footer>
 
 </body>
-
 </html>

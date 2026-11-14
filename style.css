@@ -1,8 +1,9 @@
 
 /* ==========================================
-   STUDENTHUB - PRACTICAL 2
-   Semantic HTML5 and Accessibility Styling
+   STUDENTHUB - PRACTICAL 3
+   Responsive UI using CSS Grid and Flexbox
 ========================================== */
+
 
 /* ==========================================
    1. GLOBAL STYLES
@@ -14,20 +15,32 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #F3F7FB;
     color: #293B4D;
     line-height: 1.6;
+    min-height: 100vh;
 }
 
 a {
     color: #285F8B;
+    transition: color 0.2s ease;
 }
 
 a:hover {
     color: #173F67;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* ==========================================
    2. SKIP NAVIGATION
@@ -44,14 +57,20 @@ body > a:first-child:focus {
     outline: 3px solid #F2B84B;
 }
 
+
 /* ==========================================
-   3. WEBSITE HEADER
+   3. WEBSITE HEADER - FLEXBOX
 ========================================== */
 
 header {
     background: #173F67;
     color: #FFFFFF;
     padding: 25px 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
 }
 
 header h1 {
@@ -65,8 +84,9 @@ header p {
     font-size: 15px;
 }
 
+
 /* ==========================================
-   4. MAIN NAVIGATION
+   4. MAIN NAVIGATION - FLEXBOX
 ========================================== */
 
 nav {
@@ -93,7 +113,7 @@ nav a {
     text-decoration: none;
     font-size: 14px;
     border-radius: 5px;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s ease;
 }
 
 nav a:hover {
@@ -107,6 +127,7 @@ nav a[aria-current="page"] {
     font-weight: bold;
 }
 
+
 /* ==========================================
    5. MAIN CONTENT
 ========================================== */
@@ -116,7 +137,7 @@ main {
     width: 100%;
     min-height: 65vh;
     margin: 0 auto;
-    padding: 35px;
+    padding: 25px 18px;
 }
 
 main section {
@@ -139,8 +160,37 @@ main p {
     margin-bottom: 12px;
 }
 
+
 /* ==========================================
-   6. ARTICLE AND CONTENT CARDS
+   6. CONTENT LAYOUT - CSS GRID
+========================================== */
+
+main section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+}
+
+/* Keep section headings across the full row */
+
+main section > h2,
+main section > p,
+main section > form,
+main section > ul,
+main section > ol {
+    grid-column: 1 / -1;
+}
+
+/* Responsive article cards */
+
+main section > article {
+    min-width: 0;
+    height: 100%;
+}
+
+
+/* ==========================================
+   7. ARTICLE AND CONTENT CARDS
 ========================================== */
 
 main article {
@@ -149,7 +199,11 @@ main article {
     border-top: 3px solid #78B4DC;
     border-radius: 7px;
     padding: 22px;
-    margin: 15px 0;
+    transition: box-shadow 0.2s ease;
+}
+
+main article:hover {
+    box-shadow: 0 4px 12px rgba(23, 63, 103, 0.08);
 }
 
 main article p {
@@ -160,8 +214,9 @@ main article ul {
     padding-left: 22px;
 }
 
+
 /* ==========================================
-   7. ASIDE SECTIONS
+   8. ASIDE SECTIONS
 ========================================== */
 
 main aside {
@@ -181,8 +236,9 @@ main aside a {
     font-weight: bold;
 }
 
+
 /* ==========================================
-   8. LISTS
+   9. LISTS
 ========================================== */
 
 main ul,
@@ -195,8 +251,9 @@ main li {
     margin-bottom: 7px;
 }
 
+
 /* ==========================================
-   9. FORMS
+   10. FORMS
 ========================================== */
 
 form {
@@ -208,6 +265,7 @@ form fieldset {
     border: 1px solid #C5D8E8;
     border-radius: 7px;
     padding: 25px;
+    min-width: 0;
 }
 
 form legend {
@@ -256,9 +314,16 @@ form button:focus-visible {
     outline-offset: 3px;
 }
 
-/* Form Buttons */
+
+/* ==========================================
+   11. FORM BUTTONS - FLEXBOX
+========================================== */
 
 form button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
     background: #285F8B;
     color: #FFFFFF;
     border: none;
@@ -267,15 +332,16 @@ form button {
     font-size: 14px;
     cursor: pointer;
     margin-right: 8px;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s ease;
 }
 
 form button:hover {
     background: #173F67;
 }
 
+
 /* ==========================================
-   10. LINKS AND BUTTON ACCESSIBILITY
+   12. LINKS AND ACCESSIBILITY
 ========================================== */
 
 a:focus-visible {
@@ -283,8 +349,9 @@ a:focus-visible {
     outline-offset: 3px;
 }
 
+
 /* ==========================================
-   11. WEBSITE FOOTER
+   13. WEBSITE FOOTER
 ========================================== */
 
 footer {
@@ -300,36 +367,64 @@ footer p {
     font-size: 13px;
 }
 
+
 /* ==========================================
-   12. TABLET RESPONSIVENESS
+   14. TABLET RESPONSIVENESS
+   Screen width: 651px to 900px
 ========================================== */
 
-@media screen and (max-width: 900px) {
-
-    header {
-        padding: 22px;
-    }
+@media screen and (min-width: 651px) {
 
     main {
-        padding: 28px 24px;
+        padding: 30px 25px;
     }
 
-    nav {
-        padding: 12px 15px;
+    main section {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
     }
 
     nav ul {
-        gap: 5px;
-    }
-
-    nav a {
-        padding: 8px 10px;
+        gap: 6px;
     }
 
 }
 
+
 /* ==========================================
-   13. MOBILE RESPONSIVENESS
+   15. DESKTOP RESPONSIVENESS
+   Screen width: 901px and above
+========================================== */
+
+@media screen and (min-width: 901px) {
+
+    header {
+        padding: 28px 45px;
+    }
+
+    main {
+        padding: 40px 35px;
+    }
+
+    main section {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    main h2 {
+        font-size: 27px;
+    }
+
+    nav {
+        padding: 13px 35px;
+    }
+
+}
+
+
+/* ==========================================
+   16. MOBILE RESPONSIVENESS
+   Screen width: 650px and below
 ========================================== */
 
 @media screen and (max-width: 650px) {
@@ -362,6 +457,11 @@ footer p {
         padding: 22px 15px;
     }
 
+    main section {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
     main h2 {
         font-size: 22px;
     }
@@ -381,8 +481,10 @@ footer p {
 
 }
 
+
 /* ==========================================
-   14. SMALL MOBILE SCREENS
+   17. SMALL MOBILE SCREENS
+   Screen width: 350px and below
 ========================================== */
 
 @media screen and (max-width: 350px) {
@@ -395,4 +497,206 @@ footer p {
         padding: 18px 12px;
     }
 
+    header h1 {
+        font-size: 22px;
+    }
+
+}
+
+/* ==========================================
+   PRACTICAL 3 - RESPONSIVE REGISTRATION FORM
+========================================== */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    min-width: 0;
+}
+
+.form-group input:not([type="checkbox"]),
+.form-group select {
+    width: 100%;
+    max-width: 100%;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Tablet */
+
+@media screen and (min-width: 651px) {
+    .form-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Desktop */
+
+@media screen and (min-width: 901px) {
+    .form-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 650px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions button {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   PRACTICAL 3 - RESPONSIVE CONTACT FORM
+========================================== */
+
+.message-group {
+    margin-top: 20px;
+}
+
+.message-group textarea {
+    width: 100%;
+    max-width: 100%;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    max-width: 100%;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 650px) {
+
+    .message-group {
+        margin-top: 15px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions button {
+        width: 100%;
+    }
+
+}
+
+/* ==========================================
+   FIXED RESPONSIVE NAVIGATION
+========================================== */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+/* Mobile navigation */
+@media screen and (max-width: 650px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    nav a {
+        flex: 1 1 auto;
+        text-align: center;
+        padding: 9px 10px;
+    }
+}
+
+/* ==========================================
+   STUDENTHUB LOGIN PAGE
+========================================== */
+
+.login-card {
+    display: block;
+    max-width: 550px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #FFFFFF;
+    border: 1px solid #D9E5EF;
+    border-top: 4px solid #4A91C2;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(23, 63, 103, 0.08);
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.login-form .form-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.login-form .form-group {
+    margin-bottom: 15px;
+}
+
+.login-form input:not([type="checkbox"]) {
+    width: 100%;
+    max-width: 100%;
+}
+
+.login-form .form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.login-card > p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 650px) {
+    .login-card {
+        margin: 15px auto;
+        padding: 20px;
+    }
+
+    .login-form .form-actions {
+        flex-direction: column;
+    }
+
+    .login-form .form-actions button {
+        width: 100%;
+    }
 }

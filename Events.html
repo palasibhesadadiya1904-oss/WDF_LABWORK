@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Explore technical, cultural and academic events at StudentHub.">
+        content="Explore technical, cultural, academic and sports events on StudentHub.">
 
-    <title>StudentHub | Events</title>
+    <title>StudentHub | College Events</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,47 +21,42 @@
 
     <!-- Website Header -->
     <header>
-
         <h1>🎓 StudentHub</h1>
-
         <p>Your college life, organized in one place.</p>
-
-        <!-- Main Navigation -->
-        <nav aria-label="Main navigation">
-
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Register.html">Register</a></li>
-                <li><a href="Login.html">Login</a></li>
-                <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="Events.html" aria-current="page">Events</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-                <li><a href="FAQ.html">FAQ</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="Admin.html">Admin</a></li>
-            </ul>
-
-        </nav>
-
     </header>
 
+    <!-- Main Navigation -->
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Register.html">Register</a></li>
+            <li><a href="Login.html">Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="Events.html" aria-current="page">Events</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="Admin.html">Admin</a></li>
+        </ul>
+    </nav>
 
     <!-- Main Content -->
     <main id="main-content">
 
+        <!-- Events Introduction -->
         <section aria-labelledby="events-heading">
 
-            <h2 id="events-heading">College Events</h2>
+            <h2 id="events-heading">Explore College Events</h2>
 
             <p>
                 Discover exciting opportunities to learn,
-                participate and connect with other students.
+                participate and connect with other students
+                through college activities.
             </p>
 
         </section>
-
 
         <!-- Technical Events -->
         <section aria-labelledby="technical-heading">
@@ -68,33 +64,39 @@
             <h2 id="technical-heading">Technical Events</h2>
 
             <article>
-
-                <h3>Code Competition</h3>
+                <h3>Hackathon</h3>
 
                 <p>
-                    Participate in programming challenges
-                    and test your problem-solving skills.
+                    Participate in a coding competition where
+                    students work together to solve real-world problems.
                 </p>
 
-                <p><strong>Category:</strong> Technical</p>
-
+                <p><strong>Category:</strong> Technology</p>
             </article>
 
             <article>
-
                 <h3>Web Development Workshop</h3>
 
                 <p>
-                    Learn the fundamentals of website development
-                    and explore modern web technologies.
+                    Learn about HTML, CSS and modern web development
+                    techniques through practical activities.
                 </p>
 
                 <p><strong>Category:</strong> Workshop</p>
+            </article>
 
+            <article>
+                <h3>Coding Competition</h3>
+
+                <p>
+                    Test your programming knowledge and
+                    problem-solving skills through coding challenges.
+                </p>
+
+                <p><strong>Category:</strong> Programming</p>
             </article>
 
         </section>
-
 
         <!-- Cultural Events -->
         <section aria-labelledby="cultural-heading">
@@ -102,33 +104,28 @@
             <h2 id="cultural-heading">Cultural Events</h2>
 
             <article>
-
-                <h3>Music and Dance Competition</h3>
+                <h3>Annual Cultural Fest</h3>
 
                 <p>
-                    Showcase your creativity and talent
-                    through music and dance performances.
+                    Enjoy music, dance, performances and
+                    creative activities organized by students.
                 </p>
 
                 <p><strong>Category:</strong> Cultural</p>
-
             </article>
 
             <article>
-
-                <h3>Art and Creativity Exhibition</h3>
+                <h3>Art and Photography</h3>
 
                 <p>
-                    Display your artwork, creative ideas
-                    and innovative projects.
+                    Showcase your creativity through
+                    art exhibitions and photography activities.
                 </p>
 
-                <p><strong>Category:</strong> Exhibition</p>
-
+                <p><strong>Category:</strong> Creativity</p>
             </article>
 
         </section>
-
 
         <!-- Academic Events -->
         <section aria-labelledby="academic-heading">
@@ -136,47 +133,83 @@
             <h2 id="academic-heading">Academic Events</h2>
 
             <article>
-
                 <h3>Project Exhibition</h3>
 
                 <p>
-                    Present your academic projects
-                    and share innovative solutions.
+                    Present innovative projects and demonstrate
+                    your technical and creative skills.
                 </p>
 
                 <p><strong>Category:</strong> Academic</p>
+            </article>
 
+            <article>
+                <h3>Guest Lectures</h3>
+
+                <p>
+                    Learn from experienced professionals
+                    and gain knowledge about industry trends.
+                </p>
+
+                <p><strong>Category:</strong> Learning</p>
             </article>
 
         </section>
 
+        <!-- Sports Events -->
+        <section aria-labelledby="sports-heading">
+
+            <h2 id="sports-heading">Sports Events</h2>
+
+            <article>
+                <h3>Cricket Tournament</h3>
+
+                <p>
+                    Participate in team matches and
+                    develop teamwork and sportsmanship.
+                </p>
+
+                <p><strong>Category:</strong> Sports</p>
+            </article>
+
+            <article>
+                <h3>Indoor Games</h3>
+
+                <p>
+                    Take part in chess, table tennis
+                    and other indoor competitions.
+                </p>
+
+                <p><strong>Category:</strong> Indoor Sports</p>
+            </article>
+
+        </section>
 
         <!-- Event Information -->
-        <aside aria-labelledby="event-info-heading">
+        <section aria-labelledby="participation-heading">
 
-            <h2 id="event-info-heading">Event Information</h2>
+            <h2 id="participation-heading">Want to Participate?</h2>
 
-            <p>
-                Students can contact the college event coordinator
-                for registration details and event schedules.
-            </p>
+            <article>
+                <h3>Join Student Activities</h3>
 
-            <a href="Contact.html">Contact Us</a>
+                <p>
+                    Explore student opportunities and contact
+                    the support team for more information.
+                </p>
 
-        </aside>
+                <a href="Contact.html">Contact Us</a>
+            </article>
+
+        </section>
 
     </main>
 
-
     <!-- Website Footer -->
     <footer>
-
         <p>&copy; 2026 StudentHub. All rights reserved.</p>
-
         <p>Learn. Connect. Grow.</p>
-
     </footer>
 
 </body>
-
 </html>
