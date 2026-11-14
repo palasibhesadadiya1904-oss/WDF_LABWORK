@@ -12,20 +12,21 @@
     <title>StudentHub | Student Registration</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="registration.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Skip Navigation -->
-    <a href="#main-content">Skip to main content</a>
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
 
-    <!-- Website Header -->
     <header>
         <h1>🎓 StudentHub</h1>
         <p>Your college life, organized in one place.</p>
     </header>
 
-    <!-- Main Navigation -->
     <nav aria-label="Main navigation">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -42,10 +43,8 @@
         </ul>
     </nav>
 
-    <!-- Main Content -->
     <main id="main-content">
 
-        <!-- Registration Introduction -->
         <section aria-labelledby="registration-heading">
 
             <h2 id="registration-heading">Student Registration</h2>
@@ -57,14 +56,12 @@
 
         </section>
 
-        <!-- Registration Form -->
         <section aria-labelledby="form-heading">
 
             <h2 id="form-heading">Create Your Account</h2>
 
-            <form action="#" method="post">
+            <form id="registrationForm" novalidate>
 
-                <!-- Personal Information -->
                 <fieldset>
 
                     <legend>Personal Information</legend>
@@ -74,59 +71,68 @@
                         <div class="form-group">
                             <label for="fullname">Full Name:</label>
 
-                            <input
-                                type="text"
-                                id="fullname"
-                                name="fullname"
+                            <input type="text" id="fullname" name="fullname"
                                 placeholder="Enter your full name"
-                                autocomplete="name"
-                                required>
+                                autocomplete="name" required
+                                aria-describedby="nameError">
+
+                            <span class="error-message" id="nameError"
+                                aria-live="polite"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email Address:</label>
 
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
+                            <input type="email" id="email" name="email"
                                 placeholder="Enter your email"
-                                autocomplete="email"
-                                required>
+                                autocomplete="email" required
+                                aria-describedby="emailError">
+
+                            <span class="error-message" id="emailError"
+                                aria-live="polite"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="mobile">Mobile Number:</label>
 
-                            <input
-                                type="tel"
-                                id="mobile"
-                                name="mobile"
-                                placeholder="Enter mobile number"
-                                autocomplete="tel"
-                                required>
+                            <input type="tel" id="mobile" name="mobile"
+                                placeholder="10-digit mobile number"
+                                autocomplete="tel" maxlength="10"
+                                inputmode="numeric" required
+                                aria-describedby="mobileError">
+
+                            <span class="error-message" id="mobileError"
+                                aria-live="polite"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="dob">Date of Birth:</label>
 
-                            <input
-                                type="date"
-                                id="dob"
-                                name="dob"
-                                required>
+                            <input type="date" id="dob" name="dob" required
+                                aria-describedby="dobError">
+
+                            <span class="error-message" id="dobError"
+                                aria-live="polite"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="gender">Gender:</label>
 
-                            <select id="gender" name="gender" required>
+                            <select id="gender" name="gender" required
+                                aria-describedby="genderError">
+
                                 <option value="">Select Gender</option>
                                 <option value="female">Female</option>
                                 <option value="male">Male</option>
                                 <option value="other">Other</option>
-                                <option value="prefer-not-to-say">Prefer not to say</option>
+                                <option value="prefer-not-to-say">
+                                    Prefer not to say
+                                </option>
+
                             </select>
+
+                            <span class="error-message" id="genderError"
+                                aria-live="polite"></span>
                         </div>
 
                     </div>
@@ -135,7 +141,6 @@
 
                 <br>
 
-                <!-- Academic Information -->
                 <fieldset>
 
                     <legend>Academic Information</legend>
@@ -145,37 +150,55 @@
                         <div class="form-group">
                             <label for="studentid">Student ID:</label>
 
-                            <input
-                                type="text"
-                                id="studentid"
-                                name="studentid"
-                                placeholder="Enter student ID"
-                                required>
+                            <input type="text" id="studentid" name="studentid"
+                                placeholder="Enter student ID" required
+                                aria-describedby="studentidError">
+
+                            <span class="error-message" id="studentidError"
+                                aria-live="polite"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="course">Course:</label>
 
-                            <select id="course" name="course" required>
+                            <select id="course" name="course" required
+                                aria-describedby="courseError">
+
                                 <option value="">Select Course</option>
-                                <option value="computer-engineering">Computer Engineering</option>
+                                <option value="computer-engineering">
+                                    Computer Engineering
+                                </option>
                                 <option value="it">Information Technology</option>
-                                <option value="mechanical">Mechanical Engineering</option>
+                                <option value="mechanical">
+                                    Mechanical Engineering
+                                </option>
                                 <option value="civil">Civil Engineering</option>
-                                <option value="electrical">Electrical Engineering</option>
+                                <option value="electrical">
+                                    Electrical Engineering
+                                </option>
+
                             </select>
+
+                            <span class="error-message" id="courseError"
+                                aria-live="polite"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="year">Academic Year:</label>
 
-                            <select id="year" name="year" required>
+                            <select id="year" name="year" required
+                                aria-describedby="yearError">
+
                                 <option value="">Select Year</option>
                                 <option value="first">First Year</option>
                                 <option value="second">Second Year</option>
                                 <option value="third">Third Year</option>
                                 <option value="fourth">Fourth Year</option>
+
                             </select>
+
+                            <span class="error-message" id="yearError"
+                                aria-live="polite"></span>
                         </div>
 
                     </div>
@@ -184,7 +207,6 @@
 
                 <br>
 
-                <!-- Account Information -->
                 <fieldset>
 
                     <legend>Account Information</legend>
@@ -194,25 +216,44 @@
                         <div class="form-group">
                             <label for="password">Password:</label>
 
-                            <input
-                                type="password"
-                                id="password"
+                            <input type="password" id="password"
                                 name="password"
                                 placeholder="Create a password"
                                 autocomplete="new-password"
-                                required>
+                                minlength="8" required
+                                aria-describedby="passwordHelp passwordError">
+
+                            <small id="passwordHelp">
+                                Minimum 8 characters, including uppercase,
+                                lowercase, number and special character.
+                            </small>
+
+                            <div class="password-strength">
+                                <label for="strengthBar">
+                                    Password Strength:
+                                </label>
+                                <progress id="strengthBar" value="0" max="4">
+                                </progress>
+                                <span id="strengthText">Not entered</span>
+                            </div>
+
+                            <span class="error-message" id="passwordError"
+                                aria-live="polite"></span>
                         </div>
 
                         <div class="form-group">
-                            <label for="confirm-password">Confirm Password:</label>
+                            <label for="confirm-password">
+                                Confirm Password:
+                            </label>
 
-                            <input
-                                type="password"
-                                id="confirm-password"
+                            <input type="password" id="confirm-password"
                                 name="confirm-password"
                                 placeholder="Confirm your password"
-                                autocomplete="new-password"
-                                required>
+                                autocomplete="new-password" required
+                                aria-describedby="confirmError">
+
+                            <span class="error-message" id="confirmError"
+                                aria-live="polite"></span>
                         </div>
 
                     </div>
@@ -221,19 +262,22 @@
 
                 <br>
 
-                
-<div class="terms-group">
-    <input type="checkbox" id="terms" name="terms" required>
-    <label for="terms">
-        I agree to the terms and conditions.
-    </label>
-</div>
+                <div class="terms-group">
 
+                    <input type="checkbox" id="terms" name="terms" required>
 
+                    <label for="terms">
+                        I agree to the terms and conditions.
+                    </label>
 
                 </div>
 
-                <!-- Form Buttons -->
+                <span class="error-message" id="termsError"
+                    aria-live="polite"></span>
+
+                <div id="formMessage" role="status"
+                    aria-live="polite"></div>
+
                 <div class="form-actions">
 
                     <button type="submit">Create Account</button>
@@ -246,7 +290,6 @@
 
         </section>
 
-        <!-- Existing Account -->
         <section aria-labelledby="login-link-heading">
 
             <h2 id="login-link-heading">Already Have an Account?</h2>
@@ -264,7 +307,6 @@
 
     </main>
 
-    <!-- Website Footer -->
     <footer>
         <p>&copy; 2026 StudentHub. All rights reserved.</p>
         <p>Learn. Connect. Grow.</p>
