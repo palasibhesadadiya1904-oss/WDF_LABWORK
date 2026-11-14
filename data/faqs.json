@@ -1,0 +1,93 @@
+
+[
+    {
+        "id": 1,
+        "question": "What is StudentHub?",
+        "answer": "StudentHub is a student-friendly platform that provides academic information, college events and student services.",
+        "category": "General"
+    },
+    {
+        "id": 2,
+        "question": "Who can use StudentHub?",
+        "answer": "Students can use StudentHub to explore academic information, college activities and available services.",
+        "category": "General"
+    },
+    {
+        "id": 3,
+        "question": "How can I register on StudentHub?",
+        "answer": "Open the Register page, enter your personal and academic details and submit the registration form.",
+        "category": "Account"
+    },
+    {
+        "id": 4,
+        "question": "How can I log in?",
+        "answer": "Visit the Login page and enter your registered email address and password.",
+        "category": "Account"
+    },
+    {
+        "id": 5,
+        "question": "Can I update my profile?",
+        "answer": "You can view your sample student profile information through the Profile page.",
+        "category": "Account"
+    },
+    {
+        "id": 6,
+        "question": "Where can I find college events?",
+        "answer": "Visit the Events page to explore technical, cultural, sports and academic events.",
+        "category": "Events"
+    },
+    {
+        "id": 7,
+        "question": "How can I search for an event?",
+        "answer": "Use the search box on the Events page to search by event name, venue or description.",
+        "category": "Events"
+    },
+    {
+        "id": 8,
+        "question": "Can I filter events by category?",
+        "answer": "Yes. Select Technical, Cultural, Sports or Academic from the category filter.",
+        "category": "Events"
+    },
+    {
+        "id": 9,
+        "question": "Where can I view student profiles?",
+        "answer": "Open the Students page to explore student names, roll numbers, departments and skills.",
+        "category": "Students"
+    },
+    {
+        "id": 10,
+        "question": "Can I search students by roll number?",
+        "answer": "Yes. Enter a student's name or roll number in the student search field.",
+        "category": "Students"
+    },
+    {
+        "id": 11,
+        "question": "Is StudentHub mobile-friendly?",
+        "answer": "Yes. StudentHub uses responsive CSS layouts to support desktop, tablet and mobile screens.",
+        "category": "General"
+    },
+    {
+        "id": 12,
+        "question": "How can I contact the support team?",
+        "answer": "Visit the Contact page to find the available contact information and support form.",
+        "category": "Support"
+    },
+    {
+        "id": 13,
+        "question": "How can I share feedback?",
+        "answer": "Open the Feedback page and submit your suggestions using the feedback form.",
+        "category": "Support"
+    },
+    {
+        "id": 14,
+        "question": "What should I do if a page does not load?",
+        "answer": "Check your internet or local server connection, refresh the page and check the browser console for errors.",
+        "category": "Support"
+    },
+    {
+        "id": 15,
+        "question": "Does StudentHub store registration details permanently?",
+        "answer": "This practical demonstrates frontend functionality. Permanent storage requires a backend and database.",
+        "category": "Account"
+    }
+]

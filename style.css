@@ -1121,3 +1121,243 @@ form select:focus {
     }
 
 }
+
+
+/* PRACTICAL 6 - STUDENT PROFILES */
+
+main section[aria-live="polite"] {
+    display: block;
+    width: 100%;
+}
+
+.student-controls {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.student-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.student-card {
+    min-width: 0;
+    padding: 22px;
+    background: white;
+    border: 1px solid #d5e3ef;
+    border-top: 5px solid #65a9d6;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+    box-sizing: border-box;
+}
+
+.student-card h3 {
+    color: #173f65;
+    font-size: 21px;
+}
+
+.student-card p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+@media screen and (max-width: 900px) {
+    .student-grid,
+    .student-controls {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .student-grid,
+    .student-controls {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* ==========================================
+   PRACTICAL 6 - FINAL EVENTS LAYOUT FIX
+========================================== */
+
+/* Remove the global grid layout from the event display section */
+
+main section[aria-live="polite"] {
+    display: block;
+    width: 100%;
+}
+
+/* Make the event list use the full available width */
+
+#eventList.event-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    gap: 24px;
+    margin-top: 25px;
+}
+
+/* Event cards */
+
+#eventList .event-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #d5e3ef;
+    border-top: 5px solid #65a9d6;
+    border-radius: 10px;
+    overflow-wrap: break-word;
+}
+
+#eventList .event-card h3 {
+    font-size: 21px;
+    line-height: 1.4;
+    color: #173f65;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+#eventList .event-card p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Tablet */
+
+@media screen and (max-width: 900px) {
+    #eventList.event-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 600px) {
+    #eventList.event-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   PRACTICAL 6 - DYNAMIC FAQ PAGE
+========================================== */
+
+main section[aria-live="polite"] {
+    display: block;
+    width: 100%;
+}
+
+.faq-controls {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.faq-card {
+    min-width: 0;
+    padding: 22px;
+    background: white;
+    border: 1px solid #d5e3ef;
+    border-left: 5px solid #65a9d6;
+    border-radius: 9px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
+.faq-card h3 {
+    color: #173f65;
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+.faq-card .faq-category {
+    display: inline-block;
+    background: #dceeff;
+    color: #174b75;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.faq-card .faq-answer {
+    color: #526579;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+@media screen and (max-width: 900px) {
+    .faq-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .faq-grid,
+    .faq-controls {
+        grid-template-columns: 1fr;
+    }
+}
+/* DARK MODE */
+
+body.dark-theme {
+    background-color: #121826;
+    color: #f1f5f9;
+}
+
+body.dark-theme header {
+    background-color: #0f172a;
+    color: white;
+}
+
+body.dark-theme nav {
+    background-color: #1e293b;
+}
+
+body.dark-theme nav a {
+    color: white;
+}
+
+body.dark-theme main section,
+body.dark-theme article {
+    background-color: #1e293b;
+    color: #f1f5f9;
+}
+
+body.dark-theme footer {
+    background-color: #0f172a;
+    color: white;
+}
+
+body.dark-theme button {
+    background-color: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+body.dark-theme a {
+    color: #7dd3fc;
+}
+
+body.dark-theme input,
+body.dark-theme select,
+body.dark-theme textarea {
+    background-color: #334155;
+    color: white;
+    border-color: #64748b;
+}

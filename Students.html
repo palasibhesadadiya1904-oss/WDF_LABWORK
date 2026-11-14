@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Explore student profiles on StudentHub.">
+
+    <title>Student Profiles | StudentHub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="js/students.js" defer></script>
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
+
+    <!-- HEADER -->
+
+    <header>
+        <h1>🎓 StudentHub</h1>
+        <p>Your college life, organized in one place.</p>
+    </header>
+
+    <!-- NAVIGATION -->
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Register.html">Register</a></li>
+            <li><a href="Login.html">Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="Events.html">Events</a></li>
+            <li><a href="Students.html" aria-current="page">Students</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="Admin.html">Admin</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+
+    <main id="main-content">
+
+        <section>
+            <h2>Student Profiles</h2>
+
+            <p>
+                Explore student information, academic departments
+                and technical skills.
+            </p>
+        </section>
+
+        <!-- SEARCH AND FILTER -->
+
+        <section aria-labelledby="student-search-heading">
+
+            <h2 id="student-search-heading">Find Students</h2>
+
+            <div class="student-controls">
+
+                <div class="form-group">
+                    <label for="studentSearch">
+                        Search Student:
+                    </label>
+
+                    <input
+                        type="search"
+                        id="studentSearch"
+                        placeholder="Search by name or roll number...">
+                </div>
+
+                <div class="form-group">
+                    <label for="departmentFilter">
+                        Filter by Department:
+                    </label>
+
+                    <select id="departmentFilter">
+                        <option value="all">All Departments</option>
+                        <option value="Computer Engineering">
+                            Computer Engineering
+                        </option>
+                        <option value="Information Technology">
+                            Information Technology
+                        </option>
+                        <option value="Mechanical Engineering">
+                            Mechanical Engineering
+                        </option>
+                        <option value="Civil Engineering">
+                            Civil Engineering
+                        </option>
+                        <option value="Electrical Engineering">
+                            Electrical Engineering
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="studentSort">Sort Students:</label>
+
+                    <select id="studentSort">
+                        <option value="name-asc">Name: A to Z</option>
+                        <option value="name-desc">Name: Z to A</option>
+                    </select>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- STUDENT STATUS -->
+
+        <section aria-live="polite">
+
+            <p id="studentStatus">Loading students...</p>
+
+            <div id="studentList" class="student-grid">
+
+                <!-- Student cards will be generated using JavaScript -->
+
+            </div>
+
+            <p id="studentEmptyMessage" hidden>
+                No students found. Try another search or department.
+            </p>
+
+        </section>
+
+        <!-- PAGINATION -->
+
+        <section class="pagination-section">
+
+            <h2>Student Pages</h2>
+
+            <div class="pagination">
+
+                <button type="button" id="studentPrevious" disabled>
+                    Previous
+                </button>
+
+                <span id="studentPageInfo">Page 1</span>
+
+                <button type="button" id="studentNext" disabled>
+                    Next
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>&copy; 2026 StudentHub. All rights reserved.</p>
+        <p>Learn. Connect. Grow.</p>
+    </footer>
+
+</body>
+</html>

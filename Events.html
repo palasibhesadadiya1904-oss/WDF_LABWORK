@@ -6,26 +6,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Explore technical, cultural, academic and sports events on StudentHub.">
+    <meta name="description" content="Explore college events on StudentHub.">
 
-    <title>StudentHub | College Events</title>
+    <title>Events | StudentHub</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="js/events.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Skip Navigation -->
-    <a href="#main-content">Skip to main content</a>
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
 
-    <!-- Website Header -->
+    <!-- HEADER -->
+
     <header>
         <h1>🎓 StudentHub</h1>
         <p>Your college life, organized in one place.</p>
     </header>
 
-    <!-- Main Navigation -->
+    <!-- NAVIGATION -->
+
     <nav aria-label="Main navigation">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -39,173 +43,110 @@
             <li><a href="FAQ.html">FAQ</a></li>
             <li><a href="feedback.html">Feedback</a></li>
             <li><a href="Admin.html">Admin</a></li>
-        </ul>
+       <li><a href="Students.html">Students</a></li> </ul>
     </nav>
 
-    <!-- Main Content -->
+    <!-- MAIN CONTENT -->
+
     <main id="main-content">
 
-        <!-- Events Introduction -->
-        <section aria-labelledby="events-heading">
-
-            <h2 id="events-heading">Explore College Events</h2>
+        <section>
+            <h2>College Events</h2>
 
             <p>
-                Discover exciting opportunities to learn,
-                participate and connect with other students
-                through college activities.
+                Explore upcoming technical, cultural, sports
+                and academic events at StudentHub.
+            </p>
+        </section>
+
+        <!-- SEARCH AND FILTER -->
+
+        <section aria-labelledby="search-heading">
+
+            <h2 id="search-heading">Find an Event</h2>
+
+            <div class="event-controls">
+
+                <div class="form-group">
+                    <label for="eventSearch">Search Events:</label>
+
+                    <input
+                        type="search"
+                        id="eventSearch"
+                        placeholder="Search by event name or venue...">
+                </div>
+
+                <div class="form-group">
+                    <label for="categoryFilter">Filter by Category:</label>
+
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="Technical">Technical</option>
+                        <option value="Cultural">Cultural</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Academic">Academic</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="sortEvents">Sort Events:</label>
+
+                    <select id="sortEvents">
+                        <option value="date-asc">Date: Oldest First</option>
+                        <option value="date-desc">Date: Newest First</option>
+                        <option value="title-asc">Name: A to Z</option>
+                        <option value="title-desc">Name: Z to A</option>
+                    </select>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- EVENT STATUS -->
+
+        <section aria-live="polite">
+
+            <p id="eventStatus">Loading events...</p>
+
+            <div id="eventList" class="event-grid">
+
+                <!-- Event cards will be displayed here using JavaScript -->
+
+            </div>
+
+            <p id="emptyMessage" hidden>
+                No events found. Try changing your search or filter.
             </p>
 
         </section>
 
-        <!-- Technical Events -->
-        <section aria-labelledby="technical-heading">
+        <!-- PAGINATION -->
 
-            <h2 id="technical-heading">Technical Events</h2>
+        <section class="pagination-section">
 
-            <article>
-                <h3>Hackathon</h3>
+            <h2>Event Pages</h2>
 
-                <p>
-                    Participate in a coding competition where
-                    students work together to solve real-world problems.
-                </p>
+            <div class="pagination">
 
-                <p><strong>Category:</strong> Technology</p>
-            </article>
+                <button type="button" id="previousPage" disabled>
+                    Previous
+                </button>
 
-            <article>
-                <h3>Web Development Workshop</h3>
+                <span id="pageInfo">Page 1</span>
 
-                <p>
-                    Learn about HTML, CSS and modern web development
-                    techniques through practical activities.
-                </p>
+                <button type="button" id="nextPage" disabled>
+                    Next
+                </button>
 
-                <p><strong>Category:</strong> Workshop</p>
-            </article>
-
-            <article>
-                <h3>Coding Competition</h3>
-
-                <p>
-                    Test your programming knowledge and
-                    problem-solving skills through coding challenges.
-                </p>
-
-                <p><strong>Category:</strong> Programming</p>
-            </article>
-
-        </section>
-
-        <!-- Cultural Events -->
-        <section aria-labelledby="cultural-heading">
-
-            <h2 id="cultural-heading">Cultural Events</h2>
-
-            <article>
-                <h3>Annual Cultural Fest</h3>
-
-                <p>
-                    Enjoy music, dance, performances and
-                    creative activities organized by students.
-                </p>
-
-                <p><strong>Category:</strong> Cultural</p>
-            </article>
-
-            <article>
-                <h3>Art and Photography</h3>
-
-                <p>
-                    Showcase your creativity through
-                    art exhibitions and photography activities.
-                </p>
-
-                <p><strong>Category:</strong> Creativity</p>
-            </article>
-
-        </section>
-
-        <!-- Academic Events -->
-        <section aria-labelledby="academic-heading">
-
-            <h2 id="academic-heading">Academic Events</h2>
-
-            <article>
-                <h3>Project Exhibition</h3>
-
-                <p>
-                    Present innovative projects and demonstrate
-                    your technical and creative skills.
-                </p>
-
-                <p><strong>Category:</strong> Academic</p>
-            </article>
-
-            <article>
-                <h3>Guest Lectures</h3>
-
-                <p>
-                    Learn from experienced professionals
-                    and gain knowledge about industry trends.
-                </p>
-
-                <p><strong>Category:</strong> Learning</p>
-            </article>
-
-        </section>
-
-        <!-- Sports Events -->
-        <section aria-labelledby="sports-heading">
-
-            <h2 id="sports-heading">Sports Events</h2>
-
-            <article>
-                <h3>Cricket Tournament</h3>
-
-                <p>
-                    Participate in team matches and
-                    develop teamwork and sportsmanship.
-                </p>
-
-                <p><strong>Category:</strong> Sports</p>
-            </article>
-
-            <article>
-                <h3>Indoor Games</h3>
-
-                <p>
-                    Take part in chess, table tennis
-                    and other indoor competitions.
-                </p>
-
-                <p><strong>Category:</strong> Indoor Sports</p>
-            </article>
-
-        </section>
-
-        <!-- Event Information -->
-        <section aria-labelledby="participation-heading">
-
-            <h2 id="participation-heading">Want to Participate?</h2>
-
-            <article>
-                <h3>Join Student Activities</h3>
-
-                <p>
-                    Explore student opportunities and contact
-                    the support team for more information.
-                </p>
-
-                <a href="Contact.html">Contact Us</a>
-            </article>
+            </div>
 
         </section>
 
     </main>
 
-    <!-- Website Footer -->
+    <!-- FOOTER -->
+
     <footer>
         <p>&copy; 2026 StudentHub. All rights reserved.</p>
         <p>Learn. Connect. Grow.</p>

@@ -1,0 +1,138 @@
+
+[
+    {
+        "id": 1,
+        "name": "Aarav Patel",
+        "rollNo": "CE001",
+        "department": "Computer Engineering",
+        "year": "Second Year",
+        "email": "aarav.patel@example.com",
+        "skills": ["C++", "HTML", "CSS"]
+    },
+    {
+        "id": 2,
+        "name": "Diya Shah",
+        "rollNo": "CE002",
+        "department": "Computer Engineering",
+        "year": "Second Year",
+        "email": "diya.shah@example.com",
+        "skills": ["Java", "JavaScript", "SQL"]
+    },
+    {
+        "id": 3,
+        "name": "Rohan Mehta",
+        "rollNo": "IT001",
+        "department": "Information Technology",
+        "year": "Third Year",
+        "email": "rohan.mehta@example.com",
+        "skills": ["Python", "Data Science"]
+    },
+    {
+        "id": 4,
+        "name": "Ananya Desai",
+        "rollNo": "CE003",
+        "department": "Computer Engineering",
+        "year": "First Year",
+        "email": "ananya.desai@example.com",
+        "skills": ["C", "Problem Solving"]
+    },
+    {
+        "id": 5,
+        "name": "Krish Joshi",
+        "rollNo": "ME001",
+        "department": "Mechanical Engineering",
+        "year": "Second Year",
+        "email": "krish.joshi@example.com",
+        "skills": ["CAD", "Robotics"]
+    },
+    {
+        "id": 6,
+        "name": "Mira Trivedi",
+        "rollNo": "IT002",
+        "department": "Information Technology",
+        "year": "Fourth Year",
+        "email": "mira.trivedi@example.com",
+        "skills": ["React", "Node.js", "MongoDB"]
+    },
+    {
+        "id": 7,
+        "name": "Dev Patel",
+        "rollNo": "CE004",
+        "department": "Computer Engineering",
+        "year": "Third Year",
+        "email": "dev.patel@example.com",
+        "skills": ["DSA", "C++", "Git"]
+    },
+    {
+        "id": 8,
+        "name": "Isha Parmar",
+        "rollNo": "CV001",
+        "department": "Civil Engineering",
+        "year": "Second Year",
+        "email": "isha.parmar@example.com",
+        "skills": ["AutoCAD", "Surveying"]
+    },
+    {
+        "id": 9,
+        "name": "Kabir Shah",
+        "rollNo": "EE001",
+        "department": "Electrical Engineering",
+        "year": "Third Year",
+        "email": "kabir.shah@example.com",
+        "skills": ["Circuit Design", "MATLAB"]
+    },
+    {
+        "id": 10,
+        "name": "Nisha Patel",
+        "rollNo": "IT003",
+        "department": "Information Technology",
+        "year": "First Year",
+        "email": "nisha.patel@example.com",
+        "skills": ["HTML", "CSS", "Python"]
+    },
+    {
+        "id": 11,
+        "name": "Arjun Dave",
+        "rollNo": "ME002",
+        "department": "Mechanical Engineering",
+        "year": "Fourth Year",
+        "email": "arjun.dave@example.com",
+        "skills": ["SolidWorks", "Manufacturing"]
+    },
+    {
+        "id": 12,
+        "name": "Riya Shah",
+        "rollNo": "CE005",
+        "department": "Computer Engineering",
+        "year": "First Year",
+        "email": "riya.shah@example.com",
+        "skills": ["C", "Web Development"]
+    },
+    {
+        "id": 13,
+        "name": "Manav Joshi",
+        "rollNo": "CV002",
+        "department": "Civil Engineering",
+        "year": "Third Year",
+        "email": "manav.joshi@example.com",
+        "skills": ["Structural Design", "GIS"]
+    },
+    {
+        "id": 14,
+        "name": "Tara Mehta",
+        "rollNo": "EE002",
+        "department": "Electrical Engineering",
+        "year": "First Year",
+        "email": "tara.mehta@example.com",
+        "skills": ["Electronics", "Arduino"]
+    },
+    {
+        "id": 15,
+        "name": "Yash Desai",
+        "rollNo": "IT004",
+        "department": "Information Technology",
+        "year": "Second Year",
+        "email": "yash.desai@example.com",
+        "skills": ["Java", "Database Management"]
+    }
+]

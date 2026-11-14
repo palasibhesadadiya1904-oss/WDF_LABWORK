@@ -5,13 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Frequently asked questions about StudentHub.">
+
+    <meta name="description"
+        content="Frequently asked questions about StudentHub.">
 
     <title>FAQ | StudentHub</title>
 
     <link rel="stylesheet" href="style.css">
-    
-    <script src="script.js" defer></script>
+
+<script src="js/faqs.js" defer></script>
 </head>
 
 <body>
@@ -23,46 +25,28 @@
     <!-- HEADER -->
 
     <header>
-        <h1>StudentHub</h1>
-        <p>Your Student Support and Information Portal</p>
+        <h1>🎓 StudentHub</h1>
+        <p>Your college life, organized in one place.</p>
     </header>
-
-    <!-- THEME BUTTON -->
-
-    <div class="theme-control">
-        <button type="button" id="themeButton" class="theme-button">
-            Dark Mode
-        </button>
-    </div>
-
-    <!-- HAMBURGER MENU -->
-
-    <button
-        type="button"
-        id="menuButton"
-        class="menu-button"
-        aria-expanded="false"
-        aria-controls="mainNavigation">
-
-        ☰ Menu
-    </button>
 
     <!-- NAVIGATION -->
 
-    <nav id="mainNavigation" aria-label="Main navigation">
-
-        <a href="index.html">Home</a>
-        <a href="About.html">About</a>
-        <a href="Register.html">Register</a>
-        <a href="Login.html">Login</a>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="Events.html">Events</a>
-        <a href="profile.html">Profile</a>
-        <a href="Contact.html">Contact</a>
-        <a href="FAQ.html" aria-current="page">FAQ</a>
-        <a href="feedback.html">Feedback</a>
-        <a href="Admin.html">Admin</a>
-
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Register.html">Register</a></li>
+            <li><a href="Login.html">Login</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="Events.html">Events</a></li>
+            <li><a href="Students.html">Students</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="FAQ.html" aria-current="page">FAQ</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="Admin.html">Admin</a></li>
+            <li><a href="Students.html">Students</a></li>
+        <li><a href="Students.html">Students</a></li></ul>
     </nav>
 
     <!-- MAIN CONTENT -->
@@ -73,167 +57,92 @@
             <h2>Frequently Asked Questions</h2>
 
             <p>
-                Find answers to common questions about using
-                the StudentHub website and its features.
-                Click any question to view its answer.
+                Find answers to common questions about
+                StudentHub and its services.
             </p>
         </section>
 
-        <!-- GENERAL QUESTIONS -->
+        <!-- SEARCH AND FILTER -->
 
-        <section>
+        <section aria-labelledby="faq-search-heading">
 
-            <h2>General Questions</h2>
+            <h2 id="faq-search-heading">Find Your Answer</h2>
 
-            <div class="faq-item">
+            <div class="faq-controls">
 
-                <button
-                    type="button"
-                    class="faq-question"
-                    data-faq-question
-                    aria-expanded="false">
+                <div class="form-group">
 
-                    1. What is StudentHub?
+                    <label for="faqSearch">Search Questions:</label>
 
-                </button>
+                    <input
+                        type="search"
+                        id="faqSearch"
+                        placeholder="Search your question...">
 
-                <div class="faq-answer" hidden>
-                    <p>
-                        StudentHub is a student-friendly portal
-                        that provides information about academic
-                        activities, events and student services.
-                    </p>
                 </div>
 
-            </div>
+                <div class="form-group">
 
-            <div class="faq-item">
+                    <label for="faqCategory">Filter by Category:</label>
 
-                <button
-                    type="button"
-                    class="faq-question"
-                    data-faq-question
-                    aria-expanded="false">
+                    <select id="faqCategory">
 
-                    2. Who can use StudentHub?
+                        <option value="all">All Categories</option>
+                        <option value="General">General</option>
+                        <option value="Account">Account</option>
+                        <option value="Events">Events</option>
+                        <option value="Students">Students</option>
+                        <option value="Support">Support</option>
 
-                </button>
+                    </select>
 
-                <div class="faq-answer" hidden>
-                    <p>
-                        Students can use StudentHub to explore
-                        its available pages and access
-                        student-related information.
-                    </p>
                 </div>
 
             </div>
 
         </section>
 
-        <!-- ACCOUNT QUESTIONS -->
+        <!-- FAQ STATUS AND LIST -->
 
-        <section>
+        <section aria-live="polite">
 
-            <h2>Account Questions</h2>
+            <p id="faqStatus">Loading questions...</p>
 
-            <div class="faq-item">
+            <div id="faqList" class="faq-grid">
 
-                <button
-                    type="button"
-                    class="faq-question"
-                    data-faq-question
-                    aria-expanded="false">
-
-                    3. How can I register?
-
-                </button>
-
-                <div class="faq-answer" hidden>
-                    <p>
-                        Visit the Registration page, fill in
-                        the required details and submit
-                        the registration form.
-                    </p>
-                </div>
+                <!-- FAQ cards will be generated using JavaScript -->
 
             </div>
 
-            <div class="faq-item">
+            <p id="faqEmptyMessage" hidden>
+                No questions found. Try another search or category.
+            </p>
 
-                <button
-                    type="button"
-                    class="faq-question"
-                    data-faq-question
-                    aria-expanded="false">
+        </section>
 
-                    4. Where can I view my profile?
+        <!-- PAGINATION -->
 
+        <section class="pagination-section">
+
+            <h2>FAQ Pages</h2>
+
+            <div class="pagination">
+
+                <button type="button" id="faqPrevious" disabled>
+                    Previous
                 </button>
 
-                <div class="faq-answer" hidden>
-                    <p>
-                        Open the Profile page to view
-                        the sample student profile information.
-                    </p>
-                </div>
+                <span id="faqPageInfo">Page 1</span>
+
+                <button type="button" id="faqNext" disabled>
+                    Next
+                </button>
 
             </div>
 
         </section>
 
-        <!-- WEBSITE QUESTIONS -->
-
-        <section>
-
-            <h2>Website Questions</h2>
-
-            <div class="faq-item">
-
-                <button
-                    type="button"
-                    class="faq-question"
-                    data-faq-question
-                    aria-expanded="false">
-
-                    5. Is StudentHub mobile-friendly?
-
-                </button>
-
-                <div class="faq-answer" hidden>
-                    <p>
-                        Yes. The website uses responsive CSS
-                        layouts to adjust its design for mobile,
-                        tablet and desktop screens.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="faq-item">
-
-                <button
-                    type="button"
-                    class="faq-question"
-                    data-faq-question
-                    aria-expanded="false">
-
-                    6. How can I contact the support team?
-
-                </button>
-
-                <div class="faq-answer" hidden>
-                    <p>
-                        Visit the Contact page to find contact
-                        information and the contact form.
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- SUPPORT -->
+        <!-- SUPPORT SECTION -->
 
         <section>
 
@@ -254,6 +163,7 @@
 
     <footer>
         <p>&copy; 2026 StudentHub. All rights reserved.</p>
+        <p>Learn. Connect. Grow.</p>
     </footer>
 
 </body>

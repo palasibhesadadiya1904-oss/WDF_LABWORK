@@ -1,0 +1,138 @@
+
+[
+    {
+        "id": 1,
+        "title": "Web Development Workshop",
+        "category": "Technical",
+        "date": "2026-12-05",
+        "time": "10:00 AM",
+        "venue": "Computer Lab 1",
+        "description": "Learn HTML, CSS and JavaScript through practical activities."
+    },
+    {
+        "id": 2,
+        "title": "Codeathon 2026",
+        "category": "Technical",
+        "date": "2026-12-08",
+        "time": "09:00 AM",
+        "venue": "Main Auditorium",
+        "description": "Participate in a coding competition and solve programming challenges."
+    },
+    {
+        "id": 3,
+        "title": "Annual Cultural Fest",
+        "category": "Cultural",
+        "date": "2026-12-12",
+        "time": "04:00 PM",
+        "venue": "College Ground",
+        "description": "Enjoy music, dance, drama and student performances."
+    },
+    {
+        "id": 4,
+        "title": "AI and Machine Learning Seminar",
+        "category": "Technical",
+        "date": "2026-12-15",
+        "time": "11:00 AM",
+        "venue": "Seminar Hall",
+        "description": "Explore artificial intelligence and machine learning applications."
+    },
+    {
+        "id": 5,
+        "title": "Inter-College Cricket Tournament",
+        "category": "Sports",
+        "date": "2026-12-18",
+        "time": "08:00 AM",
+        "venue": "Sports Ground",
+        "description": "Watch different college teams compete in a cricket tournament."
+    },
+    {
+        "id": 6,
+        "title": "Photography Competition",
+        "category": "Cultural",
+        "date": "2026-12-20",
+        "time": "10:00 AM",
+        "venue": "Art Gallery",
+        "description": "Showcase your photography skills and creative ideas."
+    },
+    {
+        "id": 7,
+        "title": "Cyber Security Awareness",
+        "category": "Technical",
+        "date": "2026-12-22",
+        "time": "02:00 PM",
+        "venue": "Computer Lab 2",
+        "description": "Understand cybersecurity, online safety and ethical hacking."
+    },
+    {
+        "id": 8,
+        "title": "Basketball Championship",
+        "category": "Sports",
+        "date": "2026-12-24",
+        "time": "09:00 AM",
+        "venue": "Basketball Court",
+        "description": "Compete in the annual college basketball championship."
+    },
+    {
+        "id": 9,
+        "title": "Entrepreneurship Talk",
+        "category": "Academic",
+        "date": "2026-12-27",
+        "time": "11:30 AM",
+        "venue": "Conference Room",
+        "description": "Learn about startups, business ideas and entrepreneurship."
+    },
+    {
+        "id": 10,
+        "title": "Robotics Exhibition",
+        "category": "Technical",
+        "date": "2027-01-05",
+        "time": "10:00 AM",
+        "venue": "Innovation Lab",
+        "description": "Explore student-built robots and innovative engineering projects."
+    },
+    {
+        "id": 11,
+        "title": "Garba Night",
+        "category": "Cultural",
+        "date": "2027-01-08",
+        "time": "06:00 PM",
+        "venue": "College Ground",
+        "description": "Celebrate Gujarati culture with a traditional Garba night."
+    },
+    {
+        "id": 12,
+        "title": "Football League",
+        "category": "Sports",
+        "date": "2027-01-12",
+        "time": "08:30 AM",
+        "venue": "Football Ground",
+        "description": "Take part in an exciting inter-department football competition."
+    },
+    {
+        "id": 13,
+        "title": "Resume Building Workshop",
+        "category": "Academic",
+        "date": "2027-01-15",
+        "time": "01:00 PM",
+        "venue": "Placement Cell",
+        "description": "Learn how to prepare an effective resume for internships and jobs."
+    },
+    {
+        "id": 14,
+        "title": "Science and Innovation Fair",
+        "category": "Academic",
+        "date": "2027-01-18",
+        "time": "10:30 AM",
+        "venue": "Exhibition Hall",
+        "description": "Present innovative ideas, research models and science projects."
+    },
+    {
+        "id": 15,
+        "title": "Photography and Art Exhibition",
+        "category": "Cultural",
+        "date": "2027-01-22",
+        "time": "11:00 AM",
+        "venue": "College Gallery",
+        "description": "Explore artwork, paintings and photographs created by students."
+    }
+]
