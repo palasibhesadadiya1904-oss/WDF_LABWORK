@@ -1,7 +1,12 @@
 
-/* ==============================
-   STUDENTHUB - MAIN DESIGN
-============================== */
+/* ==========================================
+   STUDENTHUB - PRACTICAL 2
+   Semantic HTML5 and Accessibility Styling
+========================================== */
+
+/* ==========================================
+   1. GLOBAL STYLES
+========================================== */
 
 * {
     margin: 0;
@@ -17,418 +22,376 @@ body {
 }
 
 a {
-    color: inherit;
+    color: #285F8B;
 }
 
-/* Main Layout */
-
-.page-layout {
-    display: flex;
-    min-height: 100vh;
+a:hover {
+    color: #173F67;
 }
 
-/* ==============================
-   SIDEBAR
-============================== */
+/* ==========================================
+   2. SKIP NAVIGATION
+========================================== */
 
-.sidebar {
-    width: 250px;
-    min-width: 250px;
+body > a:first-child {
+    display: inline-block;
+    padding: 8px 15px;
+    color: #173F67;
+    background: #FFFFFF;
+}
+
+body > a:first-child:focus {
+    outline: 3px solid #F2B84B;
+}
+
+/* ==========================================
+   3. WEBSITE HEADER
+========================================== */
+
+header {
     background: #173F67;
     color: #FFFFFF;
-    padding: 28px 18px;
-    display: flex;
-    flex-direction: column;
+    padding: 25px 35px;
 }
 
-.brand {
-    padding: 5px 10px 25px;
-    border-bottom: 1px solid #426181;
-}
-
-.brand h2 {
+header h1 {
     color: #FFFFFF;
-    font-size: 25px;
+    font-size: 30px;
+    margin-bottom: 5px;
 }
 
-.brand p {
+header p {
     color: #C4D8E9;
-    font-size: 13px;
-    margin-top: 3px;
+    font-size: 15px;
 }
 
-/* Sidebar Navigation */
+/* ==========================================
+   4. MAIN NAVIGATION
+========================================== */
 
-.sidebar nav {
-    margin-top: 28px;
+nav {
+    background: #285F8B;
+    padding: 12px 25px;
 }
 
-.menu-heading {
-    color: #B8D0E5;
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-    padding: 0 12px;
-    margin-bottom: 13px;
-}
-
-.sidebar ul {
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
     list-style: none;
 }
 
-.sidebar li {
-    margin-bottom: 6px;
+nav li {
+    margin: 0;
 }
 
-.sidebar nav a {
+nav a {
     display: block;
-    padding: 10px 13px;
-    color: #E2EDF7;
-    font-size: 14px;
+    padding: 9px 13px;
+    color: #FFFFFF;
     text-decoration: none;
+    font-size: 14px;
     border-radius: 5px;
     transition: background-color 0.2s;
 }
 
-.sidebar nav a:hover {
-    background: #28577E;
-    color: #FFFFFF;
-}
-
-.sidebar nav a.active {
+nav a:hover {
     background: #4A91C2;
     color: #FFFFFF;
 }
 
-.sidebar-bottom {
-    margin-top: auto;
-    padding: 20px 10px 0;
-    border-top: 1px solid #426181;
-    color: #C4D8E9;
-    font-size: 13px;
-}
-
-/* ==============================
-   MAIN CONTENT
-============================== */
-
-.main-content {
-    flex: 1;
-    min-width: 0;
-    max-width: 1500px;
-    padding: 35px 45px;
-}
-
-/* Page Heading */
-
-.page-header {
-    margin-bottom: 28px;
-}
-
-.breadcrumb {
-    font-size: 11px;
-    letter-spacing: 1px;
-    color: #64829D;
-    margin-bottom: 7px;
-}
-
-.page-header h1 {
-    color: #173F67;
-    font-size: 30px;
-    margin-bottom: 4px;
-}
-
-.page-header > div > p:last-child {
-    color: #6B7F91;
-    font-size: 15px;
-}
-
-/* ==============================
-   WELCOME SECTION
-============================== */
-
-.welcome-section {
-    background: #D9EDFC;
-    border: 1px solid #C5E1F4;
-    border-left: 5px solid #4A91C2;
-    border-radius: 7px;
-    padding: 40px;
-    margin-bottom: 38px;
-}
-
-.welcome-text {
-    max-width: 750px;
-}
-
-.section-label {
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-    color: #39749F;
-    margin-bottom: 12px;
-}
-
-.welcome-section h2 {
-    color: #173F67;
-    font-size: 29px;
-    margin-bottom: 12px;
-}
-
-.welcome-section p {
-    color: #48647C;
-    font-size: 15px;
-    margin-bottom: 20px;
-}
-
-/* Button */
-
-.primary-button {
-    display: inline-block;
-    background: #285F8B;
+nav a[aria-current="page"] {
+    background: #4A91C2;
     color: #FFFFFF;
-    padding: 11px 19px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 14px;
-    transition: background-color 0.2s;
+    font-weight: bold;
 }
 
-.primary-button:hover {
-    background: #173F67;
+/* ==========================================
+   5. MAIN CONTENT
+========================================== */
+
+main {
+    max-width: 1200px;
+    width: 100%;
+    min-height: 65vh;
+    margin: 0 auto;
+    padding: 35px;
 }
 
-/* ==============================
-   SECTION HEADINGS
-============================== */
-
-.content-section {
-    margin-bottom: 38px;
+main section {
+    margin-bottom: 30px;
 }
 
-.section-title {
-    margin-bottom: 18px;
-}
-
-.section-title h2 {
+main h2 {
     color: #173F67;
-    font-size: 23px;
+    font-size: 25px;
+    margin-bottom: 12px;
 }
 
-.section-title p {
-    color: #73879A;
-    font-size: 14px;
-    margin-top: 3px;
+main h3 {
+    color: #285F8B;
+    font-size: 19px;
+    margin-bottom: 8px;
 }
 
-/* ==============================
-   SERVICE CARDS
-============================== */
-
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
+main p {
+    margin-bottom: 12px;
 }
 
-.service-card {
+/* ==========================================
+   6. ARTICLE AND CONTENT CARDS
+========================================== */
+
+main article {
     background: #FFFFFF;
     border: 1px solid #D9E5EF;
     border-top: 3px solid #78B4DC;
     border-radius: 7px;
-    padding: 23px;
-    transition: border-color 0.2s;
+    padding: 22px;
+    margin: 15px 0;
 }
 
-.service-card:hover {
-    border-top-color: #285F8B;
-}
-
-.service-card h3 {
-    color: #285F8B;
-    font-size: 18px;
-    margin-bottom: 9px;
-}
-
-.service-card p {
+main article p {
     color: #65798B;
-    font-size: 14px;
 }
 
-/* ==============================
-   CAMPUS UPDATES
-============================== */
-
-.updates-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
+main article ul {
+    padding-left: 22px;
 }
 
-.information-panel {
+/* ==========================================
+   7. ASIDE SECTIONS
+========================================== */
+
+main aside {
+    background: #D9EDFC;
+    border: 1px solid #C5E1F4;
+    border-left: 5px solid #4A91C2;
+    border-radius: 7px;
+    padding: 22px;
+    margin: 25px 0;
+}
+
+main aside h2 {
+    font-size: 21px;
+}
+
+main aside a {
+    font-weight: bold;
+}
+
+/* ==========================================
+   8. LISTS
+========================================== */
+
+main ul,
+main ol {
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+main li {
+    margin-bottom: 7px;
+}
+
+/* ==========================================
+   9. FORMS
+========================================== */
+
+form {
+    width: 100%;
+}
+
+form fieldset {
     background: #FFFFFF;
-    border: 1px solid #D9E5EF;
+    border: 1px solid #C5D8E8;
     border-radius: 7px;
-    padding: 23px;
+    padding: 25px;
 }
 
-.information-panel h3 {
-    color: #285F8B;
-    font-size: 18px;
-    margin-bottom: 13px;
-}
-
-.update-list {
-    padding-left: 20px;
-    color: #65798B;
-    font-size: 14px;
-}
-
-.update-list li {
-    margin-bottom: 9px;
-}
-
-/* ==============================
-   CLOSING SECTION
-============================== */
-
-.closing-section {
-    background: #E4F1FA;
-    border-radius: 7px;
-    border: 1px solid #D1E5F3;
-    padding: 28px;
-    text-align: center;
-    margin-top: 35px;
-}
-
-.closing-section h2 {
+form legend {
     color: #173F67;
-    font-size: 22px;
-    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 10px;
 }
 
-.closing-section p {
-    color: #647D91;
+form label {
+    display: inline-block;
+    color: #293B4D;
+    margin-bottom: 5px;
+}
+
+form input:not([type="radio"]):not([type="checkbox"]),
+form select,
+form textarea {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    padding: 11px;
+    border: 1px solid #B7C9D9;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
+    background: #FFFFFF;
+    color: #293B4D;
 }
 
-/* ==============================
-   FOOTER
-============================== */
-
-.page-footer {
-    border-top: 1px solid #D8E3EC;
-    padding: 18px 0;
-    margin-top: 30px;
-    color: #788A99;
-    font-size: 12px;
+form textarea {
+    resize: vertical;
 }
 
-/* Keyboard Focus */
+form input[type="radio"],
+form input[type="checkbox"] {
+    margin-right: 5px;
+    accent-color: #285F8B;
+}
+
+form input:focus-visible,
+form select:focus-visible,
+form textarea:focus-visible,
+form button:focus-visible {
+    outline: 3px solid #4A91C2;
+    outline-offset: 3px;
+}
+
+/* Form Buttons */
+
+form button {
+    background: #285F8B;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 11px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: background-color 0.2s;
+}
+
+form button:hover {
+    background: #173F67;
+}
+
+/* ==========================================
+   10. LINKS AND BUTTON ACCESSIBILITY
+========================================== */
 
 a:focus-visible {
     outline: 3px solid #F2B84B;
     outline-offset: 3px;
 }
 
-/* ==============================
-   TABLET RESPONSIVENESS
-============================== */
+/* ==========================================
+   11. WEBSITE FOOTER
+========================================== */
+
+footer {
+    background: #173F67;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 22px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 4px 0;
+    font-size: 13px;
+}
+
+/* ==========================================
+   12. TABLET RESPONSIVENESS
+========================================== */
 
 @media screen and (max-width: 900px) {
 
-    .sidebar {
-        width: 210px;
-        min-width: 210px;
-        padding: 22px 12px;
+    header {
+        padding: 22px;
     }
 
-    .main-content {
+    main {
         padding: 28px 24px;
+    }
+
+    nav {
+        padding: 12px 15px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 8px 10px;
     }
 
 }
 
-/* ==============================
-   MOBILE RESPONSIVENESS
-============================== */
+/* ==========================================
+   13. MOBILE RESPONSIVENESS
+========================================== */
 
 @media screen and (max-width: 650px) {
 
-    .page-layout {
-        flex-direction: column;
+    header {
+        padding: 20px 16px;
     }
 
-    .sidebar {
-        width: 100%;
-        min-width: 0;
-        padding: 17px;
-        border-bottom: 3px solid #4A91C2;
+    header h1 {
+        font-size: 25px;
     }
 
-    .brand {
-        padding: 0 5px 14px;
+    nav {
+        padding: 10px;
     }
 
-    .brand h2 {
-        font-size: 23px;
-    }
-
-    .sidebar nav {
-        margin-top: 15px;
-    }
-
-    .sidebar ul {
+    nav ul {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 5px;
     }
 
-    .sidebar li {
-        margin: 0;
-    }
-
-    .sidebar nav a {
+    nav a {
         padding: 9px;
         font-size: 13px;
+        text-align: center;
     }
 
-    .sidebar-bottom {
-        display: none;
+    main {
+        padding: 22px 15px;
     }
 
-    .main-content {
-        width: 100%;
-        padding: 22px 16px;
+    main h2 {
+        font-size: 22px;
     }
 
-    .page-header h1 {
-        font-size: 25px;
+    main article,
+    main aside {
+        padding: 17px;
     }
 
-    .welcome-section {
-        padding: 25px 20px;
+    form fieldset {
+        padding: 16px;
     }
 
-    .welcome-section h2 {
-        font-size: 23px;
-    }
-
-    .service-grid,
-    .updates-grid {
-        grid-template-columns: 1fr;
+    form button {
+        margin-bottom: 8px;
     }
 
 }
 
-/* Small Mobile */
+/* ==========================================
+   14. SMALL MOBILE SCREENS
+========================================== */
 
 @media screen and (max-width: 350px) {
 
-    .sidebar ul {
+    nav ul {
         grid-template-columns: 1fr;
     }
 
-    .main-content {
+    main {
         padding: 18px 12px;
     }
 
