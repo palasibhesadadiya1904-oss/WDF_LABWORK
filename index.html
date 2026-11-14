@@ -5,203 +5,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StudentHub student information and support portal.">
 
-    <meta name="description"
-        content="StudentHub helps students manage academic information, college events and student services.">
+    <title>Home | StudentHub</title>
 
-    <title>StudentHub | Home</title>
-
-    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Skip Navigation -->
-    <a href="#main-content">Skip to main content</a>
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
 
-    <!-- Website Header -->
+    <!-- HEADER -->
+
     <header>
-
-        <h1>🎓 StudentHub</h1>
-
-        <p>Your college life, organized in one place.</p>
-
+        <h1>StudentHub</h1>
+        <p>Your Student Support and Information Portal</p>
     </header>
 
+    <!-- THEME SWITCHER -->
 
-    <!-- Main Navigation -->
-    <nav aria-label="Main navigation">
+    <div class="theme-control">
+        <button type="button" id="themeButton" class="theme-button">
+            Dark Mode
+        </button>
+    </div>
 
-        <ul>
-            <li><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="Register.html">Register</a></li>
-            <li><a href="Login.html">Login</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="Events.html">Events</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-            <li><a href="FAQ.html">FAQ</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-            <li><a href="Admin.html">Admin</a></li>
-        </ul>
+    <!-- HAMBURGER MENU -->
+
+    <button
+        type="button"
+        id="menuButton"
+        class="menu-button"
+        aria-expanded="false"
+        aria-controls="mainNavigation">
+
+        ☰ Menu
+    </button>
+
+    <!-- NAVIGATION -->
+
+    <nav id="mainNavigation" aria-label="Main navigation">
+
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="About.html">About</a>
+        <a href="Register.html">Register</a>
+        <a href="Login.html">Login</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="Events.html">Events</a>
+        <a href="profile.html">Profile</a>
+        <a href="Contact.html">Contact</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="Admin.html">Admin</a>
 
     </nav>
 
+    <!-- MAIN CONTENT -->
 
-    <!-- Main Content -->
     <main id="main-content">
 
-        <!-- Welcome Section -->
-        <section aria-labelledby="welcome-heading">
+        <!-- NOTIFICATION BANNER -->
 
-            <h2 id="welcome-heading">Welcome to StudentHub!</h2>
+        <section
+            id="notificationBanner"
+            class="notification-banner">
 
             <p>
-                Your one-stop platform for managing college activities,
-                accessing academic information and staying connected
-                with campus life.
+                <strong>Latest Update:</strong>
+                Welcome to StudentHub! Explore the latest student updates
+                and campus activities.
+            </p>
+
+            <button type="button" id="closeNotification">
+                Dismiss
+            </button>
+
+        </section>
+
+        <!-- WELCOME SECTION -->
+
+        <section>
+
+            <h2>Welcome to StudentHub</h2>
+
+            <p>
+                StudentHub is a student-friendly platform designed to
+                provide academic information, campus updates and
+                useful student services in one place.
             </p>
 
             <article>
-
-                <h3>Explore StudentHub</h3>
-
+                <h3>Learn and Explore</h3>
                 <p>
-                    Discover useful student services, upcoming events
-                    and important college updates in one place.
+                    Discover academic resources, college events and
+                    opportunities to improve your skills.
                 </p>
+            </article>
 
-                <a href="About.html">Learn More About Us</a>
-
+            <article>
+                <h3>Stay Connected</h3>
+                <p>
+                    Stay updated with important announcements and
+                    student activities.
+                </p>
             </article>
 
         </section>
 
+        <!-- CONTENT SLIDER -->
 
-        <!-- Student Services -->
-        <section aria-labelledby="services-heading">
+        <section>
 
-            <h2 id="services-heading">Our Student Services</h2>
+            <h2>StudentHub Highlights</h2>
+
+            <div class="slider-container">
+
+                <div class="slide" data-slide>
+                    <h3>Academic Updates</h3>
+                    <p>
+                        Stay informed about academic activities,
+                        assignments and important updates.
+                    </p>
+                </div>
+
+                <div class="slide" data-slide hidden>
+                    <h3>Technical Events</h3>
+                    <p>
+                        Participate in technical events, workshops
+                        and coding competitions.
+                    </p>
+                </div>
+
+                <div class="slide" data-slide hidden>
+                    <h3>Student Activities</h3>
+                    <p>
+                        Explore cultural, sports and other
+                        college activities.
+                    </p>
+                </div>
+
+                <div class="slider-buttons">
+
+                    <button type="button" id="previousSlide">
+                        Previous
+                    </button>
+
+                    <button type="button" id="nextSlide">
+                        Next
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- STUDENT SERVICES -->
+
+        <section>
+
+            <h2>Our Student Services</h2>
 
             <article>
-
                 <h3>Student Dashboard</h3>
-
                 <p>
-                    Access your academic information and
-                    important student updates.
+                    View academic information and student activities.
                 </p>
-
                 <a href="dashboard.html">Visit Dashboard</a>
-
             </article>
 
             <article>
-
                 <h3>College Events</h3>
-
                 <p>
-                    Explore technical, cultural and academic
-                    events happening at college.
+                    Explore upcoming technical and cultural events.
                 </p>
-
                 <a href="Events.html">Explore Events</a>
-
             </article>
 
             <article>
-
-                <h3>Student Profile</h3>
-
-                <p>
-                    View your personal and academic
-                    profile information.
-                </p>
-
-                <a href="profile.html">View Profile</a>
-
-            </article>
-
-        </section>
-
-
-        <!-- Campus Updates -->
-        <section aria-labelledby="updates-heading">
-
-            <h2 id="updates-heading">Campus Updates</h2>
-
-            <article>
-
-                <h3>Academic Updates</h3>
-
-                <p>
-                    Stay informed about academic activities,
-                    examination schedules and important notices.
-                </p>
-
-            </article>
-
-            <article>
-
-                <h3>Upcoming Activities</h3>
-
-                <p>
-                    Keep track of upcoming college events,
-                    technical activities and student programs.
-                </p>
-
-            </article>
-
-        </section>
-
-
-        <!-- Help Section -->
-        <section aria-labelledby="help-heading">
-
-            <h2 id="help-heading">Need Help?</h2>
-
-            <article>
-
                 <h3>Student Support</h3>
-
                 <p>
-                    Have questions or suggestions?
-                    Our support section helps you connect with us.
+                    Find answers to common questions and get support.
                 </p>
-
                 <a href="Contact.html">Contact Us</a>
-
             </article>
 
-            <article>
+        </section>
 
-                <h3>Frequently Asked Questions</h3>
+        <!-- MODAL POPUP -->
 
-                <p>
-                    Find answers to common questions
-                    about using StudentHub.
-                </p>
+        <section>
 
-                <a href="FAQ.html">Visit FAQ</a>
+            <h2>Explore StudentHub</h2>
 
-            </article>
+            <p>
+                Want to know more about the features available
+                on StudentHub?
+            </p>
+
+            <button type="button" data-modal-open>
+                Learn More
+            </button>
 
         </section>
 
     </main>
 
+    <!-- MODAL WINDOW -->
 
-    <!-- Website Footer -->
+    <div
+        id="studentModal"
+        class="modal-overlay"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+        aria-hidden="true"
+        hidden>
+
+        <div class="modal-box">
+
+            <h2 id="modalTitle">About StudentHub</h2>
+
+            <p>
+                StudentHub brings student information, academic updates,
+                campus events and support services together in one place.
+            </p>
+
+            <p>
+                Explore the website to discover all its features.
+            </p>
+
+            <button type="button" data-modal-close>
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
     <footer>
-
         <p>&copy; 2026 StudentHub. All rights reserved.</p>
-
-        <p>Learn. Connect. Grow.</p>
-
     </footer>
 
 </body>
-
 </html>

@@ -1,23 +1,56 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Frequently asked questions about StudentHub.">
+
     <title>FAQ | StudentHub</title>
+
     <link rel="stylesheet" href="style.css">
+    
+    <script src="script.js" defer></script>
 </head>
+
 <body>
 
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
+
+    <!-- HEADER -->
 
     <header>
         <h1>StudentHub</h1>
         <p>Your Student Support and Information Portal</p>
     </header>
 
-    <nav aria-label="Main navigation">
+    <!-- THEME BUTTON -->
+
+    <div class="theme-control">
+        <button type="button" id="themeButton" class="theme-button">
+            Dark Mode
+        </button>
+    </div>
+
+    <!-- HAMBURGER MENU -->
+
+    <button
+        type="button"
+        id="menuButton"
+        class="menu-button"
+        aria-expanded="false"
+        aria-controls="mainNavigation">
+
+        ☰ Menu
+    </button>
+
+    <!-- NAVIGATION -->
+
+    <nav id="mainNavigation" aria-label="Main navigation">
+
         <a href="index.html">Home</a>
         <a href="About.html">About</a>
         <a href="Register.html">Register</a>
@@ -29,90 +62,195 @@
         <a href="FAQ.html" aria-current="page">FAQ</a>
         <a href="feedback.html">Feedback</a>
         <a href="Admin.html">Admin</a>
+
     </nav>
+
+    <!-- MAIN CONTENT -->
 
     <main id="main-content">
 
         <section>
             <h2>Frequently Asked Questions</h2>
+
             <p>
-                Find answers to common questions about using the StudentHub
-                website and its features.
+                Find answers to common questions about using
+                the StudentHub website and its features.
+                Click any question to view its answer.
             </p>
         </section>
 
+        <!-- GENERAL QUESTIONS -->
+
         <section>
+
             <h2>General Questions</h2>
 
-            <article>
-                <h3>1. What is StudentHub?</h3>
-                <p>
-                    StudentHub is a student-friendly portal that provides
-                    information about academic activities, events and
-                    student services.
-                </p>
-            </article>
+            <div class="faq-item">
 
-            <article>
-                <h3>2. Who can use StudentHub?</h3>
-                <p>
-                    Students can use StudentHub to explore its available
-                    pages and access student-related information.
-                </p>
-            </article>
+                <button
+                    type="button"
+                    class="faq-question"
+                    data-faq-question
+                    aria-expanded="false">
+
+                    1. What is StudentHub?
+
+                </button>
+
+                <div class="faq-answer" hidden>
+                    <p>
+                        StudentHub is a student-friendly portal
+                        that provides information about academic
+                        activities, events and student services.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button
+                    type="button"
+                    class="faq-question"
+                    data-faq-question
+                    aria-expanded="false">
+
+                    2. Who can use StudentHub?
+
+                </button>
+
+                <div class="faq-answer" hidden>
+                    <p>
+                        Students can use StudentHub to explore
+                        its available pages and access
+                        student-related information.
+                    </p>
+                </div>
+
+            </div>
+
         </section>
 
+        <!-- ACCOUNT QUESTIONS -->
+
         <section>
+
             <h2>Account Questions</h2>
 
-            <article>
-                <h3>3. How can I register?</h3>
-                <p>
-                    Visit the Registration page, fill in the required
-                    details and submit the registration form.
-                </p>
-            </article>
+            <div class="faq-item">
 
-            <article>
-                <h3>4. Where can I view my profile?</h3>
-                <p>
-                    Open the Profile page to view the sample student
-                    profile information.
-                </p>
-            </article>
+                <button
+                    type="button"
+                    class="faq-question"
+                    data-faq-question
+                    aria-expanded="false">
+
+                    3. How can I register?
+
+                </button>
+
+                <div class="faq-answer" hidden>
+                    <p>
+                        Visit the Registration page, fill in
+                        the required details and submit
+                        the registration form.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button
+                    type="button"
+                    class="faq-question"
+                    data-faq-question
+                    aria-expanded="false">
+
+                    4. Where can I view my profile?
+
+                </button>
+
+                <div class="faq-answer" hidden>
+                    <p>
+                        Open the Profile page to view
+                        the sample student profile information.
+                    </p>
+                </div>
+
+            </div>
+
         </section>
 
+        <!-- WEBSITE QUESTIONS -->
+
         <section>
+
             <h2>Website Questions</h2>
 
-            <article>
-                <h3>5. Is StudentHub mobile-friendly?</h3>
-                <p>
-                    Yes. The website uses responsive CSS layouts to
-                    adjust its design for mobile, tablet and desktop screens.
-                </p>
-            </article>
+            <div class="faq-item">
 
-            <article>
-                <h3>6. How can I contact the support team?</h3>
-                <p>
-                    Visit the Contact page to find contact information
-                    and the contact form.
-                </p>
-            </article>
+                <button
+                    type="button"
+                    class="faq-question"
+                    data-faq-question
+                    aria-expanded="false">
+
+                    5. Is StudentHub mobile-friendly?
+
+                </button>
+
+                <div class="faq-answer" hidden>
+                    <p>
+                        Yes. The website uses responsive CSS
+                        layouts to adjust its design for mobile,
+                        tablet and desktop screens.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button
+                    type="button"
+                    class="faq-question"
+                    data-faq-question
+                    aria-expanded="false">
+
+                    6. How can I contact the support team?
+
+                </button>
+
+                <div class="faq-answer" hidden>
+                    <p>
+                        Visit the Contact page to find contact
+                        information and the contact form.
+                    </p>
+                </div>
+
+            </div>
+
         </section>
 
+        <!-- SUPPORT -->
+
         <section>
+
             <h2>Still Have Questions?</h2>
+
             <p>
                 If you cannot find your answer, visit our
                 <a href="Contact.html">Contact page</a>
                 or share your suggestion through the
                 <a href="feedback.html">Feedback page</a>.
             </p>
+
         </section>
 
     </main>
+
+    <!-- FOOTER -->
 
     <footer>
         <p>&copy; 2026 StudentHub. All rights reserved.</p>
